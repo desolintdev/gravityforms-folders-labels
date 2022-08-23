@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
 			var genre = $(this).text(); 
 			$.ajax({
 				url: getgformsbyid.getgformsbyidajaxurl,
-				data: { action: "flgf_getformsbyid", genre: genre },
+				data: { action: "flgf_getformsbyid",security: getgformsbyid.security,  genre: genre },
 				type: 'post',
 				success: function(response) {
 					response = response.slice(0, - 1);
@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 			var label = $(this).text(); 
 			$.ajax({
 				url: getgformsbyid.getgformsbyidajaxurl,
-				data: { action: "flgf_getformsbylabelid", label: label },
+				data: { action: "flgf_getformsbylabelid",security: getgformsbyid.security,  label: label },
 				type: 'post',
 				success: function(response) {
 					response = response.slice(0, - 1);
@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
 		   	
 			$.ajax({
 				url: getAllgforms.getAllgformsajaxurl,
-				data: {action: "flgf_gfformslists"},
+				data: {action: "flgf_gfformslists",security: getAllgforms.security,},                 
 				type: 'post',
 			success: function(response) {
 			    response = response.slice(0, - 1);
@@ -75,7 +75,7 @@ jQuery(document).ready(function($){
         $.ajax({
             type: 'post',
             url: gfDel.gfdelajaxurl,
-            data: { action: "flgf_delgffolder", folder_id: folder_id },
+            data: { action: "flgf_delgffolder",security: gfDel.security,  folder_id: folder_id },
         success: function(response) {
 			response = response.slice(0, - 1);
              console.log(response);
@@ -95,7 +95,7 @@ jQuery(document).ready(function($){
         $.ajax({
             type: 'post',
             url: gfDel.gfdelajaxurl,
-            data: { action: "flgf_delgflabel", label_id: label_id },
+            data: { action: "flgf_delgflabel",security: gfDel.security,  label_id: label_id },
         success: function(response) {
 			response = response.slice(0, - 1);
              console.log(response);
@@ -150,7 +150,7 @@ jQuery(document).ready(function($){
         $.ajax({
             type: 'post',
             url:  updategffolder.gfupdateajaxurl,
-            data: { action: "flgf_updgffolder", folder_id: folder_id, folder_name: newVal },
+            data: { action: "flgf_updgffolder", security: updategffolder.security, folder_id: folder_id, folder_name: newVal },
         success: function(response) {
             console.log(response);
             if(response == "Done0") {
@@ -191,7 +191,7 @@ jQuery(document).ready(function($){
         $.ajax({
             type: 'post',
             url:  updategffolder.gfupdateajaxurl,
-            data: { action: "flgf_updgflabel", label_id: label_id, label_name: newVal },
+            data: { action: "flgf_updgflabel",security: updategffolder.security,  label_id: label_id, label_name: newVal },
         success: function(response) {
 			console.log(response);
             if(response == "Done0") {
@@ -216,7 +216,7 @@ jQuery(document).ready(function($){
         /*$('.all-forms').css({"color":"red", "font-weight":"bold"});
          $.ajax({
             url: getAllgforms.getAllgformsajaxurl,
-            data: { action: "flgf_gfformslists"},
+            data: { action: "flgf_gfformslists",security: getAllgforms.security},
             type: 'post',
         success: function(response) {
             response = response.slice(0, - 1);

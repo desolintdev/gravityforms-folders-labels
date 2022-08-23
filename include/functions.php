@@ -63,7 +63,7 @@
 	function flgf_gform_folders()
 	{
 		if (!current_user_can('install_plugins')) {
-			wp_die(__('You do not have sufficient permissions to access this page.', '"flgf"'));
+			wp_die(__('You do not have sufficient permissions to access this page.', "flgf"));
 		}
 		include plugin_dir_path( __FILE__ ) . ('gffolder_settings.php');
 	}
@@ -71,7 +71,7 @@
 	function flgf_gform_labels()
 	{
 		if (!current_user_can('install_plugins')) {
-			wp_die(__('You do not have sufficient permissions to access this page.', '"flgf"'));
+			wp_die(__('You do not have sufficient permissions to access this page.', "flgf"));
 		}
 		include plugin_dir_path( __FILE__ ) . ('gflabel_settings.php');
 	}
@@ -80,7 +80,7 @@
 	function flgf_gform_new_label()
 	{
 		if (!current_user_can('install_plugins')) {
-			wp_die(__('You do not have sufficient permissions to access this page.', '"flgf"'));
+			wp_die(__('You do not have sufficient permissions to access this page.', "flgf"));
 		}
 		include plugin_dir_path( __FILE__ ) . ('add_gflabel_settings.php');
 	}
@@ -101,6 +101,12 @@ add_action('wp_ajax_nopriv_flgf_delgffolder', 'flgf_delgffolder');
 if (!function_exists('flgf_delgffolder')) {
     function flgf_delgffolder()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['folder_id'])) {
             if ($wpdb->delete($wpdb->prefix."gfform_labels",["id"=>esc_sql(sanitize_text_field($_POST['folder_id']))])) {
@@ -119,6 +125,12 @@ add_action('wp_ajax_nopriv_flgf_delgflabel', 'flgf_delgflabel');
 if (!function_exists('flgf_delgflabel')) {
     function flgf_delgflabel()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['label_id'])) {
             if ($wpdb->delete($wpdb->prefix."gf_label_tags",["id"=>esc_sql(sanitize_text_field($_POST['label_id']))])) {
@@ -136,6 +148,12 @@ add_action('wp_ajax_nopriv_flgf_updgffolder', 'flgf_updgffolder');
 if (!function_exists('flgf_updgffolder')) {
     function flgf_updgffolder()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['folder_id'])) {
             $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name= '%s'",esc_sql(sanitize_text_field($_POST['folder_name']))));
@@ -155,6 +173,12 @@ add_action('wp_ajax_nopriv_flgf_updatetags', 'flgf_updatetags');
 if (!function_exists('flgf_updatetags')) {
     function flgf_updatetags()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['form_id'])) {
             if ($wpdb->update("{$wpdb->prefix}gf_gfolders", array('gf_gfolder' => esc_sql(sanitize_text_field($_POST['tagslist']))), array('gfform_id' => esc_sql(sanitize_text_field($_POST['form_id']))))) {
@@ -173,6 +197,12 @@ add_action('wp_ajax_nopriv_flgf_addgftags', 'flgf_addgftags');
 if (!function_exists('flgf_addgftags')) {
     function flgf_addgftags()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['label_id'])){
             $items = $wpdb->get_row( $wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix"."gf_gfolders WHERE gfform_id= '%s'",esc_sql(sanitize_text_field($_POST['label_id']))));
@@ -199,6 +229,12 @@ add_action('wp_ajax_nopriv_flgf_updgflabel', 'flgf_updgflabel');
 if (!function_exists('flgf_updgflabel')) {
     function flgf_updgflabel()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         if (isset($_POST['label_id'])) {
             $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder= '%s'",esc_sql(sanitize_text_field($_POST['label_name']))));
@@ -219,6 +255,12 @@ add_action('wp_ajax_nopriv_flgf_getallglabels', 'flgf_getallglabels');
 if (!function_exists('flgf_getallglabels')) {
     function flgf_getallglabels()
     {
+        
+  if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+    wp_send_json_error( 'Invalid security token sent.' );
+    wp_die();
+  }
         global $wpdb;
         $items = $wpdb->get_results("SELECT gf_gfolder FROM {$wpdb->prefix}gf_label_tags ORDER BY gf_gfolder asc");
         $output = 'var colors = ';
@@ -239,6 +281,11 @@ if (!function_exists('flgf_gfformslists')) {
     function flgf_gfformslists()
     {
 
+        if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+            wp_send_json_error( 'Invalid security token sent.' );
+            wp_die();
+          }
         global $wpdb;
         $items = $wpdb->get_results($wpdb->prepare("SELECT  title FROM {$wpdb->prefix}gf_form WHERE is_trash = 0 ORDER BY title asc"));
         $html .= "<table><thead><tr><th>Forms</th></tr></thead>";
@@ -260,6 +307,7 @@ if (!function_exists('flgf_gfformslists')) {
 
 function flgf_get_labels()
 {
+    
     global $wpdb;
     $items = $wpdb->get_results("SELECT gf_gfolder FROM {$wpdb->prefix}gf_label_tags");
     $data = [];
@@ -277,6 +325,12 @@ add_action('wp_ajax_nopriv_flgf_getformsbyid', 'flgf_getformsbyid');
 
 function flgf_getformsbyid(){
     
+
+    if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+        wp_send_json_error( 'Invalid security token sent.' );
+        wp_die();
+      }
 
      global $wpdb;
 
@@ -321,6 +375,11 @@ add_action('wp_ajax_nopriv_flgf_getformsbylabelid', 'flgf_getformsbylabelid');
 function flgf_getformsbylabelid(){
     
 
+    if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+        wp_send_json_error( 'Invalid security token sent.' );
+        wp_die();
+      }
      global $wpdb;
 
     if (isset($_POST['label'])){
@@ -365,6 +424,11 @@ add_action('wp_ajax_nopriv_flgfpostgffolder', 'flgfpostgffolder');
 
 function flgfpostgffolder(){
 	
+    if ( ! check_ajax_referer( 'acme-security-nonce', 'security', false ) ) {
+
+        wp_send_json_error( 'Invalid security token sent.' );
+        wp_die();
+      }
 
      global $wpdb;
 
@@ -441,7 +505,7 @@ function gf_footer_scripts()
                 $(this).removeAttr("selected");
                 $.ajax({
                     url: aajaxurl,
-                    data: {action: "flgfpostgffolder", folder: folder_title, form: form_title},
+                    data: {action: "flgfpostgffolder",security: <?php echo wp_create_nonce( 'acme-security-nonce' );?>, folder: folder_title, form: form_title},
                     type: 'post',
                     success: function (response) {
                         response = response.slice(0, -1);
@@ -481,7 +545,8 @@ function gf_footer_scripts()
                         action: "flgf_addgftags",
                         label_id: label_id,
                         folder_name: comb_tags,
-                        gfFormName: gfFormName
+                        gfFormName: gfFormName,
+                        security: <?php echo wp_create_nonce( 'acme-security-nonce' );?>,
                     },
                     success: function (response) {
                         if (response != "Error0") {
@@ -530,7 +595,7 @@ function gf_footer_scripts()
                 $.ajax({
                     type: 'post',
                     url: aajaxurl,
-                    data: {action: "flgf_updatetags", tagslist: getUpdatedTag, form_id: dataid},
+                    data: {action: "flgf_updatetags", security: <?php echo wp_create_nonce( 'acme-security-nonce' );?>, tagslist: getUpdatedTag, form_id: dataid},
                     success: function (response) {
                         if (response == "Done0") {
                         } else {
@@ -585,13 +650,13 @@ function flgf_gfolder_admin_script()
     wp_register_script("amai_woordjes_updaten", plugins_url('js/tagcomplete.min.js?t=' . time(), dirname(__FILE__)), array('jquery'));
     wp_localize_script('gflabel-scripts', 'gfDel', array('gfdelajaxurl' => admin_url('admin-ajax.php')));
 
-    wp_localize_script('gflabel-scripts', 'flgfpostFolder', array('flgfpostfolderajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('gflabel-scripts', 'flgfpostFolder', array('flgfpostfolderajaxurl' => admin_url('admin-ajax.php'), 'security'  => wp_create_nonce( 'acme-security-nonce' ),));
 
-    wp_localize_script('gflabel-scripts', 'updategffolder', array('gfupdateajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('gflabel-scripts', 'updategffolder', array('gfupdateajaxurl' => admin_url('admin-ajax.php'),'security'  => wp_create_nonce( 'acme-security-nonce' ),));
 
-    wp_localize_script('gflabel-scripts', 'getAllgforms', array('getAllgformsajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('gflabel-scripts', 'getAllgforms', array('getAllgformsajaxurl' => admin_url('admin-ajax.php'),'security'  => wp_create_nonce( 'acme-security-nonce' ),));
 
-    wp_localize_script('gflabel-scripts', 'getgformsbyid', array('getgformsbyidajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('gflabel-scripts', 'getgformsbyid', array('getgformsbyidajaxurl' => admin_url('admin-ajax.php'), 'security'  => wp_create_nonce( 'acme-security-nonce' ),));
 
     wp_enqueue_script('gflabel-scripts');
     wp_enqueue_script('amai_woordjes_updaten');

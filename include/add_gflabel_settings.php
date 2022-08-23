@@ -1,6 +1,6 @@
 <?php defined('ABSPATH') or die('No script kiddies please!');
 if (!current_user_can('install_plugins')) {
-    wp_die(__('You do not have sufficient permissions to access this page.', 'gfolders'));
+    wp_die(__('You do not have sufficient permissions to access this page.', "flgf"));
 }
 
 global $wpdb;
@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
 <div class="wrap gfolders_setting_sec">
     <h2><?php echo "Add New Folder"; ?> </h2>
-    <div class="gf_label_text"><?php _e('You can add folder to the desire form', 'gfolders'); ?>:</div>
+    <div class="gf_label_text"><?php _e('You can add folder to the desire form', "flgf"); ?>:</div>
 </div>
 
 <form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
@@ -58,7 +58,7 @@ if (isset($_POST["submit"])) {
         <input type="text" name="gf_label_name" placeholder="Type Folder Name" class="form-control gf_label_input">
     </div>
 
-    <p class="submit"><input type="submit" value="<?php _e('Save Changes', 'gfolders'); ?>" class="button button-primary" id="submit" name="submit"></p>
+    <p class="submit"><input type="submit" value="<?php _e('Save Changes', "flgf"); ?>" class="button button-primary" id="submit" name="submit"></p>
 
 </form>
 
