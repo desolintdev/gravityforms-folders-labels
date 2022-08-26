@@ -1,7 +1,4 @@
-<?php /** @noinspection ALL */
-/** @noinspection ALL */
-/** @noinspection ALL */
-/** @noinspection ALL */
+<?php
 /** @noinspection ALL */
 defined('ABSPATH') or die('No script please!');
 if (!current_user_can('install_plugins')) {
@@ -12,7 +9,7 @@ global $wpdb;
 $wpurl = get_bloginfo('wpurl');
 if (isset($_POST['genre'])) {
     $label_name = esc_sql(sanitize_text_field($_POST['genre']));
-    $items = $wpdb->get_results($wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix{gfform_labels} WHERE gflabel_name= '%s'", $label_name));
+    $items = $wpdb->get_results($wpdb->prepare("SELECT  gfform_id FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name= '%s'", $label_name));
     $data['result'] = $items;
     echo json_encode($data);
 }
@@ -29,7 +26,7 @@ if (isset($_POST["submit"])) {
 
         $rows = array(array('gfform_id' => $gform_name, 'gflabel_name' => $gf_label_name,));
 
-        if ($wpdb->get_var("SELECT COUNT(*) FROM $wpdb->prefix{gfform_labels} WHERE gflabel_name = '$gf_label_name'") > 0) {
+        if ($wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name = '$gf_label_name'") > 0) {
             wp_redirect(add_query_arg('label-added', 'failure', get_site_url() . '/wp-admin/admin.php?page=flgf_gform_folders'));
         } else {
             foreach ($rows as $row) {
@@ -72,8 +69,8 @@ if (isset($_POST["submit"])) {
         <!--</div>-->
 
         <?php
-            $gformLists = $wpdb->get_results("SELECT id, title FROM $wpdb->prefix{gf_form} ORDER BY date_created ASC");
-$gformFolders = $wpdb->get_results("SELECT DISTINCT gflabel_name  FROM $wpdb->prefix{gfform_labels} ORDER BY gflabel_name ASC");
+            $gformLists = $wpdb->get_results("SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC");
+$gformFolders = $wpdb->get_results("SELECT DISTINCT gflabel_name  FROM {$wpdb->prefix}gfform_labels ORDER BY gflabel_name ASC");
 ?>
 
         <form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">

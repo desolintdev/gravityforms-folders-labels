@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
 $path = preg_replace('/wp-content(?!.*wp-content).*/', '', __DIR__);
 include($path . 'wp-load.php');

@@ -1,4 +1,6 @@
-<?php defined('ABSPATH') or die('No script please!');
+<?php
+/** @noinspection ALL */
+defined('ABSPATH') or die('No script please!');
 
 if (!current_user_can('install_plugins')) {
     wp_die(__('You do not have sufficient permissions to access this page.', "flgf"));
@@ -9,7 +11,7 @@ global $wpdb;
 
 if (isset($_POST['genre'])) {
     $label_name = esc_sql(sanitize_text_field($_POST['genre']));
-    $items = $wpdb->get_results($wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix{gf_label_tags} WHERE gf_gfolder= '%s'", $label_name));
+    $items = $wpdb->get_results($wpdb->prepare("SELECT  gfform_id FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder= '%s'", $label_name));
     $data['result'] = $items;
     echo json_encode($data);
 }
@@ -25,7 +27,7 @@ if (isset($_POST["submit"])) {
                 'gf_gfolder' => esc_sql(sanitize_text_field($_REQUEST['gf_label_name'])) == '' ? esc_sql(sanitize_text_field($_REQUEST['gf_label_name1'])) : esc_sql(sanitize_text_field($_REQUEST['gf_label_name'])),
             )
         );
-        if ($wpdb->get_var("SELECT COUNT(*) FROM $wpdb->prefix{gf_label_tags} WHERE gf_gfolder = '$gf_label_name'") > 0) {
+        if ($wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder = '$gf_label_name'") > 0) {
             wp_redirect(add_query_arg('label-added', 'failure', get_site_url() . '/wp-admin/admin.php?page=flgf_gform_labels'));
         } else {
             foreach ($rows as $row) {
@@ -68,8 +70,8 @@ if (isset($_POST["submit"])) {
         <!--</div>-->
 
         <?php
-        $gformLists = $wpdb->get_results("SELECT id, title FROM $wpdb->prefix{gf_form} ORDER BY date_created ASC");
-$gformFolders = $wpdb->get_results("SELECT DISTINCT gf_gfolder  FROM $wpdb->prefix{gf_label_tags} ORDER BY gf_gfolder ASC");
+        $gformLists = $wpdb->get_results("SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC");
+$gformFolders = $wpdb->get_results("SELECT DISTINCT gf_gfolder  FROM {$wpdb->prefix}gf_label_tags ORDER BY gf_gfolder ASC");
 ?>
 
         <form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">

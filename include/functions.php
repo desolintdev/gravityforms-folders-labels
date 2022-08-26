@@ -39,7 +39,7 @@ if (!function_exists('flgf_gravityform_labels_activate')) {
               PRIMARY KEY  (id))".$collate);
     }
 }
-    
+
 
 /**
  * flgf_gravityforms_labels_deactivate()
@@ -88,7 +88,7 @@ function flgf_gform_new_label()
     }
     include plugin_dir_path(__FILE__) . ('add_gflabel_settings.php');
 }
-    
+
 
 function flgf_gfolders_plugin_setting($links)
 {
@@ -96,7 +96,7 @@ function flgf_gfolders_plugin_setting($links)
     array_unshift($links, $settings_link);
     return $links;
 }
-    
+
 
 //Delete Folder
 add_action('wp_ajax_flgf_delgffolder', 'flgf_delgffolder');
@@ -200,7 +200,7 @@ if (!function_exists('flgf_addgftags')) {
         global $wpdb;
         if (isset($_POST['label_id'])) {
             $items = $wpdb->get_row($wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix"."gf_gfolders WHERE gfform_id= '%s'", esc_sql(sanitize_text_field($_POST['label_id']))));
-            
+
             if ($items->gfform_id > 0) {
                 $OK = $wpdb->update($wpdb->prefix."gf_gfolders", array( 'gfform_name' => esc_sql(sanitize_text_field($_POST['gfFormName'])), 'gf_gfolder' => esc_sql(sanitize_text_field($_POST['folder_name']))), array('gfform_id'=>esc_sql(sanitize_text_field($_POST['label_id']))));
             } else {
@@ -342,7 +342,7 @@ function flgf_getformsbyid()
         $gform_edit_link = admin_url('admin.php?page=gf_edit_forms&id='.$form_id);
         $gform_preview_link = '/?gf_page=preview&id='.$form_id;
         $gform_entries_link = admin_url('admin.php?page=gf_entries&id='.$form_id);
-        
+
         $html .="<tr>
 		<td> $form_name <div class='row-actions'></span><span><a href='$gform_edit_link' target='_blank'>Edit</a> | <a href='$gform_preview_link' target='_blank'>Preview</a> | <a href='$gform_entries_link' target='_blank'>Entries</a></span></div> </td>
 	</tr>";
@@ -373,11 +373,11 @@ function flgf_getformsbylabelid()
     if (isset($_POST['label'])) {
         $label_name =  esc_sql(sanitize_text_field($wpdb->esc_like($_POST['label'])));
     }
-    
-    $items = $wpdb->get_results("SELECT {$wpdb->prefix}gf_gfolders.gfform_name as gformids FROM {$wpdb->prefix}gf_gfolders LEFT JOIN  {$wpdb->prefix}gf_form ON {$wpdb->prefix}gf_gfolders.gfform_name = {$wpdb->prefix}gf_form.title WHERE gf_gfolder LIKE '%$label_name%' AND gfform_id !='' AND is_trash = 0");
-        
 
-    
+    $items = $wpdb->get_results("SELECT {$wpdb->prefix}gf_gfolders.gfform_name as gformids FROM {$wpdb->prefix}gf_gfolders LEFT JOIN  {$wpdb->prefix}gf_form ON {$wpdb->prefix}gf_gfolders.gfform_name = {$wpdb->prefix}gf_form.title WHERE gf_gfolder LIKE '%$label_name%' AND gfform_id !='' AND is_trash = 0");
+
+
+
     $html = "<table><thead><tr><th>Forms</th></tr></thead>";
     foreach ($items as $item) {
         $form_name = $item->gformids;
@@ -390,7 +390,7 @@ function flgf_getformsbylabelid()
         $gform_edit_link = admin_url('admin.php?page=gf_edit_forms&id='.$form_id);
         $gform_preview_link = '/?gf_page=preview&id='.$form_id;
         $gform_entries_link = admin_url('admin.php?page=gf_entries&id='.$form_id);
-        
+
         $html .="<tr>
 		<td> $form_name <div class='row-actions'></span><span><a href='$gform_edit_link' target='_blank'>Edit</a> | <a href='$gform_preview_link' target='_blank'>Preview</a> | <a href='$gform_entries_link' target='_blank'>Entries</a></span></div> </td>
 	</tr>";
@@ -421,12 +421,12 @@ function flgfpostgffolder()
     if (isset($_POST['folder'])) {
         $folder_name = esc_sql(sanitize_text_field($_POST['folder']));
         $form_name = esc_sql(sanitize_text_field($_POST['form']));
-        
+
         $form_check = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE gfform_id = '$form_name'");
-        
+
         $count = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE gfform_id = '$form_name'");
         $all_check = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE gfform_id = '$form_name' AND gflabel_name='$folder_name'");
-        
+
         if ($all_check > 0) {
             $false_msg = "".$form_name." is already assigned to ".$folder_name.".";
         } else {
@@ -440,7 +440,7 @@ function flgfpostgffolder()
                         "gfform_id" => $form_name
                     )
                 );
-            
+
                 if ($rec_update) {
                     $false_msg = "".$form_name." is assigned to ".$folder_name.".";
                 }
@@ -676,7 +676,7 @@ function flgf_gf_folder_link($actions, $form_id)
     } else {
         $foler_name = $getFolder.'-selected';
     }
-    
+
     $abc = "<select name='gf_label_name1' class='folderlist form-control'><option selected='selected' disabled>$foler_name</option>";
     foreach ($gformFolders as $gformFolder) {
         if ($gformFolder->gflabel_name) {
@@ -693,6 +693,6 @@ function flgf_gf_folder_link($actions, $form_id)
     $abc .= "</select><input type='hidden' id='gform_name' class='gformID' value='$form_title'>";
     $abc .= "<div class='gftag-section'><select id='flgf-label-$form_id' class='flgf_labels_list' multiple>$tagarr</select><a href='javascript:void(0)' class='add-gftags' data-labelbtnid='$form_id'>Save Tags</a><input type='hidden' name='gf-name' id='gf-name-$form_id' value='$form_title'><input type='hidden' name='gf-tagslist' id='gf-tagslist-$form_id' value='$getFolderTags'></div>";
     $actions['gfolder_action'] = $abc;
-    
+
     return $actions;
 }
