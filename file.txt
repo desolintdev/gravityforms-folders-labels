@@ -1,0 +1,1278 @@
+FILE: gravityforms-folders-labels-master\css\bootstrap.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE:  gravityforms-folders-labels-master\css\font-awesome.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\css\select2.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\css\tagcomplete.min-remove.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\css\tagmanager.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\add_gflabel_settings.php
+----------------------------------------------------------------------
+FOUND 31 ERRORS AND 12 WARNINGS AFFECTING 15 LINES
+----------------------------------------------------------------------
+  1 | ERROR   | Filenames should be all lowercase with hyphens as
+    |         | word separators. Expected add-gflabel-settings.php,
+    |         | but found add_gflabel_settings.php.
+  1 | ERROR   | Missing file doc comment
+  1 | ERROR   | Logical operator "or" is prohibited; use "||" instead
+  3 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '__'.
+  7 | ERROR   | Processing form data without nonce verification.
+ 10 | WARNING | Processing form data without nonce verification.
+ 10 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gform_name']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 10 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 11 | WARNING | Processing form data without nonce verification.
+ 11 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 11 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 11 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 11 | WARNING | Processing form data without nonce verification.
+ 11 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name1']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 11 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 11 | WARNING | Processing form data without nonce verification.
+ 11 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 11 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 15 | WARNING | Usage of a direct database call is discouraged.
+ 17 | WARNING | wp_redirect() found. Using wp_safe_redirect(), along
+    |         | with the allowed_redirect_hosts filter if needed, can
+    |         | help avoid any chances of malicious redirects within
+    |         | code. It is also important to remember to call exit()
+    |         | after a redirect so that no other unwanted code is
+    |         | executed.
+ 24 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+ 27 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$_SERVER['REQUEST_URI']'.
+ 27 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_SERVER['REQUEST_URI']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 27 | ERROR   | $_SERVER data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 27 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_SERVER['REQUEST_URI']
+ 29 | WARNING | Processing form data without nonce verification.
+ 29 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_GET['t']. Use isset() or empty() to
+    |         | check the index exists before using it
+ 29 | ERROR   | $_GET data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 35 | WARNING | Usage of a direct database call is discouraged.
+ 35 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 35 | ERROR   | Variable "$gformList" is not in valid snake_case
+    |         | format, try "$gform_list"
+ 36 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$gformList'.
+ 36 | ERROR   | Variable "$gformList" is not in valid snake_case
+    |         | format, try "$gform_list"
+ 36 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$gformList'.
+ 36 | ERROR   | Variable "$gformList" is not in valid snake_case
+    |         | format, try "$gform_list"
+ 48 | WARNING | Usage of a direct database call is discouraged.
+ 48 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 48 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+    |         | format, try "$gform_folder"
+ 49 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$gformFolder'.
+ 49 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+    |         | format, try "$gform_folder"
+ 49 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$gformFolder'.
+ 49 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+    |         | format, try "$gform_folder"
+ 66 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\functions.php
+----------------------------------------------------------------------
+FOUND 151 ERRORS AND 89 WARNINGS AFFECTING 135 LINES
+----------------------------------------------------------------------
+   1 | ERROR   | Missing file doc comment
+   4 | WARNING | Found precision alignment of 2 spaces.
+   5 | WARNING | Found precision alignment of 2 spaces.
+   5 | ERROR   | Doc comment short description must start with a
+     |         | capital letter
+   6 | WARNING | Found precision alignment of 2 spaces.
+   7 | WARNING | Found precision alignment of 2 spaces.
+   8 | WARNING | Found precision alignment of 2 spaces.
+  10 | ERROR   | Missing doc comment for function
+     |         | flgf_gravityform_labels_activate()
+  21 | WARNING | Usage of a direct database call is discouraged.
+  21 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+  22 | WARNING | Attempting a database schema change is discouraged.
+  26 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $collate
+  29 | WARNING | Usage of a direct database call is discouraged.
+  29 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+  30 | WARNING | Attempting a database schema change is discouraged.
+  35 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $collate
+  38 | WARNING | Usage of a direct database call is discouraged.
+  38 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+  39 | WARNING | Attempting a database schema change is discouraged.
+  42 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $collate
+  48 | WARNING | Found precision alignment of 2 spaces.
+  49 | WARNING | Found precision alignment of 2 spaces.
+  49 | ERROR   | Doc comment short description must start with a
+     |         | capital letter
+  50 | WARNING | Found precision alignment of 2 spaces.
+  51 | WARNING | Found precision alignment of 2 spaces.
+  52 | WARNING | Found precision alignment of 2 spaces.
+  54 | ERROR   | Missing doc comment for function
+     |         | flgf_gravityforms_labels_deactivate()
+  56 | WARNING | Usage of a direct database call is discouraged.
+  56 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+  56 | WARNING | Attempting a database schema change is discouraged.
+  62 | ERROR   | Missing doc comment for function
+     |         | flgf_gform_set_menu()
+  76 | ERROR   | Missing doc comment for function
+     |         | flgf_gform_folders()
+  78 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '__'.
+  83 | ERROR   | Missing doc comment for function flgf_gform_labels()
+  85 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '__'.
+  91 | ERROR   | Missing doc comment for function
+     |         | flgf_gform_new_label()
+  93 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '__'.
+  99 | ERROR   | Missing doc comment for function
+     |         | flgf_gfolders_plugin_setting()
+ 106 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 111 | ERROR   | Missing doc comment for function flgf_delgffolder()
+ 120 | WARNING | Usage of a direct database call is discouraged.
+ 120 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 120 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 129 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 134 | ERROR   | Missing doc comment for function flgf_delgflabel()
+ 143 | WARNING | Usage of a direct database call is discouraged.
+ 143 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 143 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 156 | ERROR   | Missing doc comment for function flgf_updgffolder()
+ 165 | WARNING | Usage of a direct database call is discouraged.
+ 165 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 165 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%s'.
+ 165 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['folder_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 165 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 166 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 166 | ERROR   | Use Yoda Condition checks, you must.
+ 169 | ERROR   | Variable "$OK" is not in valid snake_case format,
+     |         | try "$o_k"
+ 169 | WARNING | Usage of a direct database call is discouraged.
+ 169 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 169 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['folder_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 169 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 169 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 180 | ERROR   | Missing doc comment for function flgf_updatetags()
+ 189 | WARNING | Usage of a direct database call is discouraged.
+ 189 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 189 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['tagslist']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 189 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 189 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 203 | ERROR   | Missing doc comment for function flgf_addgftags()
+ 212 | WARNING | Usage of a direct database call is discouraged.
+ 212 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 212 | ERROR   | String concat is not required here; use a single
+     |         | string instead
+ 212 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%s'.
+ 212 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 215 | ERROR   | Variable "$OK" is not in valid snake_case format,
+     |         | try "$o_k"
+ 215 | WARNING | Usage of a direct database call is discouraged.
+ 215 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 218 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['gfFormName']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 218 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 219 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['folder_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 219 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 221 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 224 | ERROR   | Variable "$OK" is not in valid snake_case format,
+     |         | try "$o_k"
+ 224 | WARNING | Usage of a direct database call is discouraged.
+ 224 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 226 | ERROR   | String concat is not required here; use a single
+     |         | string instead
+ 226 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%d'.
+ 226 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%s'.
+ 226 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%s'.
+ 227 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 228 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['folder_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 228 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 229 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['gfFormName']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 229 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 233 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 234 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$OK[0]'.
+ 234 | ERROR   | Variable "$OK" is not in valid snake_case format,
+     |         | try "$o_k"
+ 247 | ERROR   | Missing doc comment for function flgf_updgflabel()
+ 256 | WARNING | Usage of a direct database call is discouraged.
+ 256 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 256 | ERROR   | Simple placeholders should not be quoted in the
+     |         | query string in $wpdb->prepare(). Found: '%s'.
+ 256 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['label_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 256 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 257 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 257 | ERROR   | Use Yoda Condition checks, you must.
+ 260 | ERROR   | Variable "$OK" is not in valid snake_case format,
+     |         | try "$o_k"
+ 260 | WARNING | Usage of a direct database call is discouraged.
+ 260 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 260 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['label_name']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 260 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 260 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 272 | ERROR   | Missing doc comment for function
+     |         | flgf_getallglabels()
+ 280 | WARNING | Usage of a direct database call is discouraged.
+ 280 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 286 | WARNING | json_encode() is discouraged. Use wp_json_encode()
+     |         | instead.
+ 287 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$all_rows'.
+ 296 | ERROR   | Missing doc comment for function flgf_gfformslists()
+ 304 | WARNING | Usage of a direct database call is discouraged.
+ 304 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 304 | WARNING | It is not necessary to prepare a query which doesn't
+     |         | use variable replacement.
+ 308 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 308 | ERROR   | Use Yoda Condition checks, you must.
+ 318 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$html'.
+ 322 | ERROR   | Missing doc comment for function flgf_get_labels()
+ 324 | WARNING | Usage of a direct database call is discouraged.
+ 324 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 341 | ERROR   | Missing doc comment for function flgf_getformsbyid()
+ 349 | WARNING | Found precision alignment of 1 spaces.
+ 352 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 352 | ERROR   | Detected usage of a non-sanitized input variable:
+     |         | $_POST['genre']
+ 355 | WARNING | Usage of a direct database call is discouraged.
+ 355 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 355 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $label_name at "SELECT
+     |         | {$wpdb->prefix}gfform_labels.gfform_id as gformids
+     |         | FROM {$wpdb->prefix}gfform_labels LEFT JOIN
+     |         | {$wpdb->prefix}gf_form ON
+     |         | {$wpdb->prefix}gfform_labels.gfform_id =
+     |         | {$wpdb->prefix}gf_form.title WHERE gflabel_name =
+     |         | '$label_name' AND gfform_id !='' AND is_trash = 0"
+ 359 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 359 | ERROR   | Use Yoda Condition checks, you must.
+ 377 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$html'.
+ 389 | ERROR   | Missing doc comment for function
+     |         | flgf_getformsbylabelid()
+ 396 | WARNING | Found precision alignment of 1 spaces.
+ 399 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 399 | ERROR   | Detected usage of a non-sanitized input variable:
+     |         | $_POST['label']
+ 402 | WARNING | Usage of a direct database call is discouraged.
+ 402 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 402 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $label_name at "SELECT
+     |         | {$wpdb->prefix}gf_gfolders.gfform_name as gformids
+     |         | FROM {$wpdb->prefix}gf_gfolders LEFT JOIN
+     |         | {$wpdb->prefix}gf_form ON
+     |         | {$wpdb->prefix}gf_gfolders.gfform_name =
+     |         | {$wpdb->prefix}gf_form.title WHERE gf_gfolder LIKE
+     |         | '%$label_name%' AND gfform_id !='' AND is_trash = 0"
+ 407 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 407 | ERROR   | Use Yoda Condition checks, you must.
+ 426 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$html'.
+ 436 | ERROR   | Missing doc comment for function flgfpostgffolder()
+ 443 | WARNING | Found precision alignment of 1 spaces.
+ 447 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 448 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['form']. Use isset() or empty()
+     |         | to check the index exists before using it
+ 448 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 450 | WARNING | Usage of a direct database call is discouraged.
+ 450 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 450 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_name at "SELECT COUNT(*)
+     |         | FROM {$wpdb->prefix}gfform_labels WHERE gfform_id =
+     |         | '$form_name'"
+ 452 | WARNING | Usage of a direct database call is discouraged.
+ 452 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 452 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_name at "SELECT COUNT(*)
+     |         | FROM {$wpdb->prefix}gfform_labels WHERE gfform_id =
+     |         | '$form_name'"
+ 453 | WARNING | Usage of a direct database call is discouraged.
+ 453 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 453 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_name at "SELECT COUNT(*)
+     |         | FROM {$wpdb->prefix}gfform_labels WHERE gfform_id =
+     |         | '$form_name' AND gflabel_name='$folder_name'"
+ 453 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $folder_name at "SELECT
+     |         | COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE
+     |         | gfform_id = '$form_name' AND
+     |         | gflabel_name='$folder_name'"
+ 459 | WARNING | This comment is 67% valid code; is this commented
+     |         | out code?
+ 460 | WARNING | Usage of a direct database call is discouraged.
+ 460 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 471 | WARNING | Found precision alignment of 2 spaces.
+ 475 | WARNING | Usage of a direct database call is discouraged.
+ 475 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 475 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_name at "INSERT INTO
+     |         | {$wpdb->prefix}gfform_labels (gfform_id,
+     |         | gflabel_name) VALUES ('$form_name', '$folder_name')"
+ 475 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $folder_name at "INSERT INTO
+     |         | {$wpdb->prefix}gfform_labels (gfform_id,
+     |         | gflabel_name) VALUES ('$form_name', '$folder_name')"
+ 480 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$msg'.
+ 482 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$false_msg'.
+ 489 | ERROR   | Missing doc comment for function gf_footer_scripts()
+ 494 | WARNING | json_encode() is discouraged. Use wp_json_encode()
+     |         | instead.
+ 510 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'admin_url'.
+ 517 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'wp_create_nonce'.
+ 522 | WARNING | Found precision alignment of 2 spaces.
+ 558 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'wp_create_nonce'.
+ 563 | WARNING | Found precision alignment of 3 spaces.
+ 607 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'wp_create_nonce'.
+ 626 | ERROR   | Missing doc comment for function
+     |         | flgf_loading_scripts()
+ 629 | ERROR   | Stylesheets must be registered/enqueued via
+     |         | wp_enqueue_style
+ 629 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 630 | ERROR   | Stylesheets must be registered/enqueued via
+     |         | wp_enqueue_style
+ 630 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 631 | ERROR   | Stylesheets must be registered/enqueued via
+     |         | wp_enqueue_style
+ 631 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$plugin_dir_css'.
+ 632 | ERROR   | Scripts must be registered/enqueued via
+     |         | wp_enqueue_script
+ 632 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 633 | ERROR   | Scripts must be registered/enqueued via
+     |         | wp_enqueue_script
+ 633 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 634 | ERROR   | Scripts must be registered/enqueued via
+     |         | wp_enqueue_script
+ 634 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 635 | ERROR   | Scripts must be registered/enqueued via
+     |         | wp_enqueue_script
+ 635 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'plugins_url'.
+ 645 | ERROR   | Missing doc comment for function
+     |         | flgf_gfolder_admin_script()
+ 649 | ERROR   | Resource version not set in call to
+     |         | wp_register_style(). This means new versions of the
+     |         | style will not always be loaded due to browser
+     |         | caching.
+ 652 | WARNING | In footer ($in_footer) is not set explicitly
+     |         | wp_register_script; It is recommended to load
+     |         | scripts in the footer. Please set this value to
+     |         | `true` to load it in the footer, or explicitly
+     |         | `false` if it should be loaded in the header.
+ 652 | ERROR   | Resource version not set in call to
+     |         | wp_register_script(). This means new versions of the
+     |         | script will not always be loaded due to browser
+     |         | caching.
+ 654 | WARNING | In footer ($in_footer) is not set explicitly
+     |         | wp_register_script; It is recommended to load
+     |         | scripts in the footer. Please set this value to
+     |         | `true` to load it in the footer, or explicitly
+     |         | `false` if it should be loaded in the header.
+ 654 | ERROR   | Resource version not set in call to
+     |         | wp_register_script(). This means new versions of the
+     |         | script will not always be loaded due to browser
+     |         | caching.
+ 707 | ERROR   | Missing doc comment for function
+     |         | flgf_gf_folder_link()
+ 714 | ERROR   | Variable "$getFolder" is not in valid snake_case
+     |         | format, try "$get_folder"
+ 715 | ERROR   | Variable "$getFolderTags" is not in valid snake_case
+     |         | format, try "$get_folder_tags"
+ 716 | ERROR   | Variable "$gformFolders" is not in valid snake_case
+     |         | format, try "$gform_folders"
+ 716 | WARNING | Usage of a direct database call is discouraged.
+ 716 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 716 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $gffolder_table
+ 719 | WARNING | Usage of a direct database call is discouraged.
+ 719 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 719 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $gflabel_tags_table
+ 720 | WARNING | Usage of a direct database call is discouraged.
+ 720 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 720 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $gffolder_table
+ 720 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_title at " WHERE
+     |         | gfform_id = '$form_title'"
+ 721 | ERROR   | Variable "$gformFoldersTags" is not in valid
+     |         | snake_case format, try "$gform_folders_tags"
+ 721 | WARNING | Usage of a direct database call is discouraged.
+ 721 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 721 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $gffoldertags_table
+ 721 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $form_id at " WHERE gfform_id
+     |         | = '$form_id'"
+ 723 | ERROR   | Variable "$getFolder" is not in valid snake_case
+     |         | format, try "$get_folder"
+ 725 | ERROR   | Variable "$gformFoldersTags" is not in valid
+     |         | snake_case format, try "$gform_folders_tags"
+ 726 | ERROR   | Variable "$getFolderTags" is not in valid snake_case
+     |         | format, try "$get_folder_tags"
+ 726 | ERROR   | Variable "$gformFoldersTags" is not in valid
+     |         | snake_case format, try "$gform_folders_tags"
+ 729 | ERROR   | Variable "$getFolder" is not in valid snake_case
+     |         | format, try "$get_folder"
+ 729 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 729 | ERROR   | Use Yoda Condition checks, you must.
+ 732 | ERROR   | Variable "$getFolder" is not in valid snake_case
+     |         | format, try "$get_folder"
+ 736 | ERROR   | Variable "$gformFolders" is not in valid snake_case
+     |         | format, try "$gform_folders"
+ 736 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+     |         | format, try "$gform_folder"
+ 737 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+     |         | format, try "$gform_folder"
+ 738 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+     |         | format, try "$gform_folder"
+ 738 | ERROR   | Variable "$gformFolder" is not in valid snake_case
+     |         | format, try "$gform_folder"
+ 742 | ERROR   | Variable "$getFolderTags_arr" is not in valid
+     |         | snake_case format, try "$get_folder_tags_arr"
+ 742 | ERROR   | Variable "$getFolderTags" is not in valid snake_case
+     |         | format, try "$get_folder_tags"
+ 744 | ERROR   | Variable "$isSelected" is not in valid snake_case
+     |         | format, try "$is_selected"
+ 744 | WARNING | Not using strict comparison for in_array; supply
+     |         | true for third argument.
+ 744 | ERROR   | Variable "$getFolderTags_arr" is not in valid
+     |         | snake_case format, try "$get_folder_tags_arr"
+ 745 | ERROR   | Variable "$isSelected" is not in valid snake_case
+     |         | format, try "$is_selected"
+ 747 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 749 | ERROR   | Variable "$getFolderTags" is not in valid snake_case
+     |         | format, try "$get_folder_tags"
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\getall_labels.php
+----------------------------------------------------------------------
+FOUND 7 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | ERROR   | Filenames should be all lowercase with hyphens as
+    |         | word separators. Expected getall-labels.php, but
+    |         | found getall_labels.php.
+  1 | ERROR   | Missing file doc comment
+  3 | ERROR   | Overriding WordPress globals is prohibited. Found
+    |         | assignment to $path
+  7 | WARNING | Usage of a direct database call is discouraged.
+  7 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+  7 | WARNING | Processing form data without nonce verification.
+  7 | ERROR   | Use placeholders and $wpdb->prepare(); found $_GET
+  7 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_GET['query']. Use isset() or empty()
+    |         | to check the index exists before using it
+  7 | ERROR   | $_GET data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+  7 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_GET['query']
+ 13 | WARNING | json_encode() is discouraged. Use wp_json_encode()
+    |         | instead.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\gffolder_settings.php
+----------------------------------------------------------------------
+FOUND 26 ERRORS AND 15 WARNINGS AFFECTING 21 LINES
+----------------------------------------------------------------------
+  1 | ERROR   | Filenames should be all lowercase with hyphens as
+    |         | word separators. Expected gffolder-settings.php, but
+    |         | found gffolder_settings.php.
+  1 | ERROR   | Missing file doc comment
+  1 | ERROR   | Logical operator "or" is prohibited; use "||" instead
+  3 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '__'.
+  9 | ERROR   | Processing form data without nonce verification.
+  9 | ERROR   | $_POST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 10 | WARNING | Usage of a direct database call is discouraged.
+ 10 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 10 | ERROR   | Simple placeholders should not be quoted in the query
+    |         | string in $wpdb->prepare(). Found: '%s'.
+ 12 | WARNING | json_encode() is discouraged. Use wp_json_encode()
+    |         | instead.
+ 16 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_POST['gflabel_nonce']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 16 | ERROR   | $_POST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 16 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_POST['gflabel_nonce']
+ 19 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gform_name']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 19 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 20 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 20 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 21 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 21 | ERROR   | Use Yoda Condition checks, you must.
+ 22 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name1']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 22 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 32 | WARNING | Usage of a direct database call is discouraged.
+ 32 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 32 | ERROR   | Use placeholders and $wpdb->prepare(); found
+    |         | interpolated variable $gf_label_name at "SELECT
+    |         | COUNT(*) FROM $wpdb->prefix{gfform_labels} WHERE
+    |         | gflabel_name = '$gf_label_name'"
+ 33 | WARNING | wp_redirect() found. Using wp_safe_redirect(), along
+    |         | with the allowed_redirect_hosts filter if needed, can
+    |         | help avoid any chances of malicious redirects within
+    |         | code. It is also important to remember to call exit()
+    |         | after a redirect so that no other unwanted code is
+    |         | executed.
+ 36 | WARNING | Usage of a direct database call is discouraged.
+ 38 | WARNING | wp_redirect() found. Using wp_safe_redirect(), along
+    |         | with the allowed_redirect_hosts filter if needed, can
+    |         | help avoid any chances of malicious redirects within
+    |         | code. It is also important to remember to call exit()
+    |         | after a redirect so that no other unwanted code is
+    |         | executed.
+ 71 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+ 75 | ERROR   | Variable "$gformLists" is not in valid snake_case
+    |         | format, try "$gform_lists"
+ 75 | WARNING | Usage of a direct database call is discouraged.
+ 75 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 76 | ERROR   | Variable "$gformFolders" is not in valid snake_case
+    |         | format, try "$gform_folders"
+ 76 | WARNING | Usage of a direct database call is discouraged.
+ 76 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 79 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$_SERVER['REQUEST_URI']'.
+ 79 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_SERVER['REQUEST_URI']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 79 | ERROR   | $_SERVER data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 79 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_SERVER['REQUEST_URI']
+ 85 | WARNING | Found precision alignment of 3 spaces.
+ 88 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+ 89 | WARNING | Found precision alignment of 1 spaces.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\gflabel_settings.php
+----------------------------------------------------------------------
+FOUND 26 ERRORS AND 16 WARNINGS AFFECTING 19 LINES
+----------------------------------------------------------------------
+  1 | ERROR   | Filenames should be all lowercase with hyphens as
+    |         | word separators. Expected gflabel-settings.php, but
+    |         | found gflabel_settings.php.
+  1 | ERROR   | Missing file doc comment
+  1 | ERROR   | Logical operator "or" is prohibited; use "||" instead
+  4 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '__'.
+ 11 | ERROR   | Processing form data without nonce verification.
+ 11 | ERROR   | $_POST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 12 | WARNING | Usage of a direct database call is discouraged.
+ 12 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 12 | ERROR   | Simple placeholders should not be quoted in the query
+    |         | string in $wpdb->prepare(). Found: '%s'.
+ 14 | WARNING | json_encode() is discouraged. Use wp_json_encode()
+    |         | instead.
+ 19 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_POST['gflabel_nonce']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 19 | ERROR   | $_POST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 19 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_POST['gflabel_nonce']
+ 24 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 24 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 24 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 24 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name1']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 24 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 24 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_REQUEST['gf_label_name']. Use isset()
+    |         | or empty() to check the index exists before using it
+ 24 | ERROR   | $_REQUEST data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 27 | WARNING | Usage of a direct database call is discouraged.
+ 27 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 27 | ERROR   | Use placeholders and $wpdb->prepare(); found
+    |         | interpolated variable $gf_label_name at "SELECT
+    |         | COUNT(*) FROM $wpdb->prefix{gf_label_tags} WHERE
+    |         | gf_gfolder = '$gf_label_name'"
+ 28 | WARNING | wp_redirect() found. Using wp_safe_redirect(), along
+    |         | with the allowed_redirect_hosts filter if needed, can
+    |         | help avoid any chances of malicious redirects within
+    |         | code. It is also important to remember to call exit()
+    |         | after a redirect so that no other unwanted code is
+    |         | executed.
+ 31 | WARNING | Usage of a direct database call is discouraged.
+ 33 | WARNING | wp_redirect() found. Using wp_safe_redirect(), along
+    |         | with the allowed_redirect_hosts filter if needed, can
+    |         | help avoid any chances of malicious redirects within
+    |         | code. It is also important to remember to call exit()
+    |         | after a redirect so that no other unwanted code is
+    |         | executed.
+ 66 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+ 70 | ERROR   | Variable "$gformLists" is not in valid snake_case
+    |         | format, try "$gform_lists"
+ 70 | WARNING | Usage of a direct database call is discouraged.
+ 70 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 71 | ERROR   | Variable "$gformFolders" is not in valid snake_case
+    |         | format, try "$gform_folders"
+ 71 | WARNING | Usage of a direct database call is discouraged.
+ 71 | WARNING | Direct database call without caching detected.
+    |         | Consider using wp_cache_get() / wp_cache_set() or
+    |         | wp_cache_delete().
+ 74 | ERROR   | All output should be run through an escaping function
+    |         | (see the Security sections in the WordPress Developer
+    |         | Handbooks), found '$_SERVER['REQUEST_URI']'.
+ 74 | ERROR   | Detected usage of a possibly undefined superglobal
+    |         | array index: $_SERVER['REQUEST_URI']. Use isset() or
+    |         | empty() to check the index exists before using it
+ 74 | ERROR   | $_SERVER data not unslashed before sanitization. Use
+    |         | wp_unslash() or similar
+ 74 | ERROR   | Detected usage of a non-sanitized input variable:
+    |         | $_SERVER['REQUEST_URI']
+ 77 | WARNING | This comment is 80% valid code; is this commented out
+    |         | code?
+ 77 | ERROR   | Inline comments must end in full-stops, exclamation
+    |         | marks, or question marks
+ 83 | WARNING | Found precision alignment of 3 spaces.
+ 87 | ERROR   | All output should be run through an escaping function
+    |         | (like esc_html_e() or esc_attr_e()), found '_e'.
+ 88 | WARNING | Found precision alignment of 1 spaces.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\gf_folders_table.php
+----------------------------------------------------------------------
+FOUND 50 ERRORS AND 20 WARNINGS AFFECTING 40 LINES
+----------------------------------------------------------------------
+   1 | ERROR   | Filenames should be all lowercase with hyphens as
+     |         | word separators. Expected gf-folders-table.php, but
+     |         | found gf_folders_table.php.
+   1 | ERROR   | Class file names should be based on the class name
+     |         | with "class-" prepended. Expected
+     |         | class-gf-folders-table.php, but found
+     |         | gf_folders_table.php.
+   1 | ERROR   | Missing file doc comment
+   6 | ERROR   | Missing doc comment for class GF_Folders_Table
+  12 | ERROR   | There must be no blank lines after the function
+     |         | comment
+  30 | ERROR   | Doc comment for parameter "$gflabel" missing
+  34 | WARNING | This comment is 67% valid code; is this commented
+     |         | out code?
+  34 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  38 | ERROR   | Missing doc comment for function column_id()
+  38 | ERROR   | Visibility must be declared on method "column_id"
+  42 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  65 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  72 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  75 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+  87 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  92 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 110 | ERROR   | Doc comment for parameter "$gflabel" missing
+ 112 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 122 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 135 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 148 | WARNING | Processing form data without nonce verification.
+ 149 | WARNING | Processing form data without nonce verification.
+ 149 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 152 | WARNING | Usage of a direct database call is discouraged.
+ 152 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 152 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $sql_gflabel_table
+ 152 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $search at " WHERE 1 = 1
+     |         | {$search}"
+ 154 | ERROR   | Missing doc comment for function
+     |         | flgf_usort_reorder()
+ 155 | WARNING | Processing form data without nonce verification.
+ 155 | WARNING | Processing form data without nonce verification.
+ 155 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 155 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 156 | WARNING | Processing form data without nonce verification.
+ 156 | WARNING | Processing form data without nonce verification.
+ 156 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 156 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 157 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 158 | ERROR   | Use Yoda Condition checks, you must.
+ 158 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 163 | WARNING | Usage of a direct database call is discouraged.
+ 163 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 163 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $sql_gflabel_table
+ 163 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $search at " WHERE 1 = 1 AND
+     |         | gfform_id=''{$search};"
+ 166 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 181 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 194 | ERROR   | Missing doc comment for function
+     |         | get_sortable_columns()
+ 199 | ERROR   | Missing doc comment for function
+     |         | process_bulk_action()
+ 201 | WARNING | Processing form data without nonce verification.
+ 201 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_GET['record']. Use isset() or empty()
+     |         | to check the index exists before using it
+ 204 | ERROR   | Processing form data without nonce verification.
+ 204 | ERROR   | Processing form data without nonce verification.
+ 204 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 204 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 204 | ERROR   | Processing form data without nonce verification.
+ 204 | ERROR   | Processing form data without nonce verification.
+ 204 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 204 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 205 | ERROR   | Processing form data without nonce verification.
+ 205 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['bulk-delete)']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 205 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 212 | ERROR   | Missing doc comment for function
+     |         | flgf_delete_records()
+ 215 | WARNING | Usage of a direct database call is discouraged.
+ 215 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 228 | ERROR   | Missing doc comment for function inline_edit()
+ 228 | ERROR   | Visibility must be declared on method "inline_edit"
+ 230 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'admin_url'.
+ 234 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$this'.
+ 254 | WARNING | Found precision alignment of 3 spaces.
+ 257 | WARNING | Found precision alignment of 3 spaces.
+ 259 | WARNING | Found precision alignment of 1 spaces.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\gf_labels_table.php
+----------------------------------------------------------------------
+FOUND 54 ERRORS AND 20 WARNINGS AFFECTING 40 LINES
+----------------------------------------------------------------------
+   1 | ERROR   | Filenames should be all lowercase with hyphens as
+     |         | word separators. Expected gf-labels-table.php, but
+     |         | found gf_labels_table.php.
+   1 | ERROR   | Class file names should be based on the class name
+     |         | with "class-" prepended. Expected
+     |         | class-gf-labels-table.php, but found
+     |         | gf_labels_table.php.
+   1 | ERROR   | Missing file doc comment
+   5 | ERROR   | Missing doc comment for class GF_Labels_Table
+  11 | ERROR   | There must be no blank lines after the function
+     |         | comment
+  29 | ERROR   | Doc comment for parameter "$gflabel" missing
+  33 | WARNING | This comment is 67% valid code; is this commented
+     |         | out code?
+  33 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  37 | ERROR   | Missing doc comment for function column_id()
+  37 | ERROR   | Visibility must be declared on method "column_id"
+  41 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  64 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  71 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  74 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+  86 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  91 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 109 | ERROR   | Doc comment for parameter "$gflabel" missing
+ 111 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 121 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 134 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 147 | WARNING | Processing form data without nonce verification.
+ 148 | WARNING | Processing form data without nonce verification.
+ 148 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 148 | ERROR   | Detected usage of a non-sanitized input variable:
+     |         | $_REQUEST['s']
+ 151 | WARNING | Usage of a direct database call is discouraged.
+ 151 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 151 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $sql_gflabel_table
+ 151 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $search at " WHERE 1 = 1
+     |         | {$search}"
+ 153 | ERROR   | Missing doc comment for function
+     |         | flgf_usort_reorder()
+ 154 | WARNING | Processing form data without nonce verification.
+ 154 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 154 | WARNING | Processing form data without nonce verification.
+ 154 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 154 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 155 | WARNING | Processing form data without nonce verification.
+ 155 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 155 | WARNING | Processing form data without nonce verification.
+ 155 | ERROR   | $_REQUEST data not unslashed before sanitization.
+     |         | Use wp_unslash() or similar
+ 155 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 156 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 157 | ERROR   | Use Yoda Condition checks, you must.
+ 157 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 161 | WARNING | Usage of a direct database call is discouraged.
+ 161 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 161 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | $sql_gflabel_table
+ 161 | ERROR   | Use placeholders and $wpdb->prepare(); found
+     |         | interpolated variable $search at " WHERE 1 = 1
+     |         | {$search};"
+ 164 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+ 178 | ERROR   | There must be no blank lines after the function
+     |         | comment
+ 191 | ERROR   | Missing doc comment for function
+     |         | get_sortable_columns()
+ 196 | ERROR   | Missing doc comment for function
+     |         | process_bulk_action()
+ 198 | WARNING | Processing form data without nonce verification.
+ 198 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_GET['record']. Use isset() or empty()
+     |         | to check the index exists before using it
+ 201 | ERROR   | Processing form data without nonce verification.
+ 201 | ERROR   | Processing form data without nonce verification.
+ 201 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 201 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 201 | ERROR   | Processing form data without nonce verification.
+ 201 | ERROR   | Processing form data without nonce verification.
+ 201 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 201 | WARNING | Found: ==. Use strict comparisons (=== or !==).
+ 202 | ERROR   | Processing form data without nonce verification.
+ 202 | ERROR   | Detected usage of a possibly undefined superglobal
+     |         | array index: $_POST['bulk-delete']. Use isset() or
+     |         | empty() to check the index exists before using it
+ 202 | ERROR   | $_POST data not unslashed before sanitization. Use
+     |         | wp_unslash() or similar
+ 202 | ERROR   | Detected usage of a non-sanitized input variable:
+     |         | $_POST['bulk-delete']
+ 209 | ERROR   | Missing doc comment for function
+     |         | flgf_delete_label_records()
+ 211 | WARNING | Usage of a direct database call is discouraged.
+ 211 | WARNING | Direct database call without caching detected.
+     |         | Consider using wp_cache_get() / wp_cache_set() or
+     |         | wp_cache_delete().
+ 224 | ERROR   | Missing doc comment for function inline_edit()
+ 224 | ERROR   | Visibility must be declared on method "inline_edit"
+ 226 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found 'admin_url'.
+ 230 | ERROR   | All output should be run through an escaping
+     |         | function (see the Security sections in the WordPress
+     |         | Developer Handbooks), found '$this'.
+ 250 | WARNING | Found precision alignment of 3 spaces.
+ 253 | WARNING | Found precision alignment of 3 spaces.
+ 255 | WARNING | Found precision alignment of 1 spaces.
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\include\index.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\index.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | ERROR | Missing file doc comment
+  3 | ERROR | Empty line required before block comment
+ 42 | ERROR | All output should be run through an escaping function
+    |       | (see the Security sections in the WordPress Developer
+    |       | Handbooks), found '__'.
+ 46 | ERROR | Overriding WordPress globals is prohibited. Found
+    |       | assignment to $plugin
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\admin-scripts.js
+----------------------------------------------------------------------
+FOUND 3 ERRORS AND 4 WARNINGS AFFECTING 7 LINES
+----------------------------------------------------------------------
+   1 | ERROR   | Missing file doc comment
+   4 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+  94 | WARNING | Found precision alignment of 1 spaces.
+ 116 | WARNING | Found precision alignment of 1 spaces.
+ 237 | WARNING | Found precision alignment of 1 spaces.
+ 244 | WARNING | Found precision alignment of 1 spaces.
+ 247 | ERROR   | Inline comments must end in full-stops, exclamation
+     |         | marks, or question marks
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\autocomplete.multiselect-remove.js
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\bootstrap.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\bootstrap3-typeahead.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\jquery.autocomplete.multiselect-remove.js
+----------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  1 | ERROR | You must use "/**" style comments for a file comment
+  1 | ERROR | Inline comments must end in full-stops, exclamation
+    |       | marks, or question marks
+ 38 | ERROR | Inline comments must end in full-stops, exclamation
+    |       | marks, or question marks
+ 53 | ERROR | Inline comments must end in full-stops, exclamation
+    |       | marks, or question marks
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\jquery.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\scripts.js
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | ERROR | [ ] Missing file doc comment
+ 1 | ERROR | [x] Additional whitespace found at start of file
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\select2.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\tagcomplete.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\js\tagmanager.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: gravityforms-folders-labels-master\uninstall.php
+----------------------------------------------------------------------
+FOUND 4 ERRORS AND 1 WARNING AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | ERROR   | Missing file doc comment
+  3 | ERROR   | Inline comments must end in full-stops, exclamation
+    |         | marks, or question marks
+ 10 | WARNING | Found: !=. Use strict comparisons (=== or !==).
+ 10 | ERROR   | Use Yoda Condition checks, you must.
+ 12 | ERROR   | Inline comments must end in full-stops, exclamation
+    |         | marks, or question marks
+----------------------------------------------------------------------
