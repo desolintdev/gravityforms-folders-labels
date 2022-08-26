@@ -38,7 +38,7 @@ if (!function_exists('is_plugin_active')) {
     include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 }
 if (! is_plugin_active("gravityforms/gravityforms.php")) {
-    deactivate_plugins("flgf/flgf.php");
+    deactivate_plugins("gravityforms-folders-labels/index.php");
     wp_die(__("Gravity Forms is not installed and activated. Please install and activate Gravity Forms.", "flgf"));
 }
 if (is_admin()) {
