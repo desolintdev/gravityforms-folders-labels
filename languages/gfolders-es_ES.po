@@ -1,0 +1,310 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-02-19 10:37+0500\n"
+"PO-Revision-Date: 2019-02-19 10:49+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/exceptions.php:5 inc/exceptions.php:8
+msgid "Sorry, you cannot get exceptions."
+msgstr "Lo sentimos, no se pueden obtener excepciones."
+
+#: inc/functions.php:312
+msgid "Sorry, your nonce did not verify."
+msgstr "Lo siento, tu nonce no verificó."
+
+#: inc/functions.php:449
+msgid "Successfully updated."
+msgstr "Se actualizó con éxito."
+
+#: inc/functions.php:507
+msgid "Alternatively you can get course in installments."
+msgstr "Alternativamente, usted puede ejecutar en cuotas."
+
+#: inc/functions.php:508
+msgid "Following tiers are available"
+msgstr "Los siguientes terceros están disponibles"
+
+#: inc/functions.php:520
+msgid "Proceed with installments"
+msgstr "Proceder con cuotas"
+
+#: inc/functions.php:549
+msgid "To proceed, click on "
+msgstr "Para proceder, haga clic en "
+
+#: inc/functions.php:549
+msgid "View Cart"
+msgstr "Ver carrito"
+
+#: inc/functions.php:554
+msgid "Or"
+msgstr "oro"
+
+#: inc/functions.php:555
+msgid "Click add to cart for complete purchase"
+msgstr "Haga clic en añadir al carrito"
+
+#: inc/functions.php:946
+msgid "Woo Installments"
+msgstr "Woo cuotas"
+
+#: inc/functions.php:991
+msgid "Package Heading"
+msgstr "Paquete de título"
+
+#: inc/functions.php:991
+msgid "Packages or Installments"
+msgstr "Paquetes o cuotas"
+
+#: inc/functions.php:998
+msgid ""
+"Please define installment slabs which should be total of the actual price of "
+"this product"
+msgstr ""
+"Por favor, defina losas de pago que deben ser el precio total de este "
+"producto"
+
+#: inc/functions.php:1003
+msgid "Installment Slab"
+msgstr "Losa de instalación"
+
+#: inc/functions.php:1004
+msgid "Examples"
+msgstr "plantillas"
+
+#: inc/functions.php:1005
+msgid "Product Price"
+msgstr "Precio del producto"
+
+#: inc/functions.php:1006
+msgid "Installment Slabs"
+msgstr "Losas de instalación"
+
+#: inc/functions.php:1012
+msgid "Note: Each line will have a new package with price|details."
+msgstr "Nota: Cada línea tendrá un nuevo paquete con precio | detalles."
+
+#: inc/functions.php:1016
+msgid "Installments are not enabled for this product."
+msgstr "Las cuotas no están habilitadas para este producto."
+
+#: inc/functions.php:1016
+msgid "Click here"
+msgstr "Haga click aqui"
+
+#: inc/functions.php:1016
+msgid "to enable"
+msgstr "habilitar"
+
+#: inc/functions.php:1022
+msgid "Validity?"
+msgstr "Validez?"
+
+#: inc/functions.php:1024
+msgid "Days"
+msgstr "días"
+
+#: inc/functions.php:1025
+msgid "How it works?"
+msgstr "Como funciona?"
+
+#: inc/functions.php:1025
+msgid ""
+"Each slab will use the above defined number of days as valid access and "
+"after that customer has to purchase the remaining required packages or full "
+"product to access the course, page, post or classes etc. "
+msgstr ""
+"Cada una de estas páginas se utilizará de las siguientes maneras, que "
+"incluyen "
+
+#: inc/functions.php:1027
+msgid "Note: Leave it to zero \"0\" for no restrictions."
+msgstr "Nota: déjelo en cero \"0\" sin restricciones."
+
+#: inc/functions.php:1071
+msgid "Installments Control"
+msgstr "Control de cuotas"
+
+#: inc/functions.php:1099
+msgid "To access this page, users need to buy the following tiers"
+msgstr ""
+"Para acceder a esta página, los usuarios deben comprar el siguiente tercero"
+
+#: inc/functions.php:1126
+msgid "No products are found with installment packages."
+msgstr "No se encontraron productos con paquetes a plazos."
+
+#: inc/functions.php:1276
+msgid ""
+"Sorry for the inconvenience, you are required to purchase the following "
+"package(s) to proceed."
+msgstr ""
+"Disculpe las molestias, debe comprar los siguientes paquetes para continuar."
+
+#: inc/functions.php:1297
+msgid ""
+"Sorry for the inconvenience, you are required to purchase the remaining "
+"package(s) to proceed."
+msgstr ""
+"Disculpe las molestias, debe comprar el (los) paquete (s) restante (s) para "
+"continuar."
+
+#: inc/functions.php:1311
+msgid "Note:"
+msgstr "Nota:"
+
+#: inc/functions.php:1312
+msgid "Every package increases your access with another "
+msgstr "Cada paquete aumenta tu acceso a otro "
+
+#: inc/functions.php:1312
+msgid "days"
+msgstr "días"
+
+#: inc/functions.php:1323 inc/wc_settings.php:41
+msgid "Please"
+msgstr "por favor"
+
+#: inc/functions.php:1323
+msgid "to proceed"
+msgstr "proceder"
+
+#: inc/functions.php:1360 inc/wc_settings.php:3
+msgid "You do not have sufficient permissions to access this page."
+msgstr "No tiene permisos suficientes para acceder a esta página."
+
+#: inc/functions.php:1432 inc/wc_settings.php:23
+msgid "Settings"
+msgstr "ajustes"
+
+#: inc/functions.php:1495
+msgid "N/A"
+msgstr "N / A"
+
+#: inc/functions.php:1505
+msgid "Installment Package"
+msgstr "Paquete a plazos"
+
+#: inc/wc_settings.php:27
+msgid "Products"
+msgstr "productos"
+
+#: inc/wc_settings.php:28
+msgid "Post Types"
+msgstr "Tipos de publicaciones"
+
+#: inc/wc_settings.php:29
+msgid "Video Tutorials"
+msgstr "Video Tutoriales"
+
+#: inc/wc_settings.php:41
+msgid "You need WooCommerce plugin to be installed and activated."
+msgstr "Necesitas el plugin WooCommerce para ser instalado y activado."
+
+#: inc/wc_settings.php:41
+msgid "Install"
+msgstr "instalar"
+
+#: inc/wc_settings.php:41
+msgid "and"
+msgstr "y"
+
+#: inc/wc_settings.php:41
+msgid "or"
+msgstr "oro"
+
+#: inc/wc_settings.php:41
+msgid "Activate"
+msgstr "activar"
+
+#: inc/wc_settings.php:41
+msgid "plugin to proceed"
+msgstr "complemento para continuar"
+
+#: inc/wc_settings.php:69
+msgid "Optional"
+msgstr "opcional"
+
+#: inc/wc_settings.php:79
+msgid "Billing Details"
+msgstr "Detalles de facturación"
+
+#: inc/wc_settings.php:79 inc/wc_settings.php:85 inc/wc_settings.php:91
+msgid "On"
+msgstr "uno"
+
+#: inc/wc_settings.php:79 inc/wc_settings.php:85 inc/wc_settings.php:91
+msgid "Off"
+msgstr "apagado"
+
+#: inc/wc_settings.php:85
+msgid "Shipping Details"
+msgstr "Detalles de envío"
+
+#: inc/wc_settings.php:91
+msgid "Order Comments"
+msgstr "Ordenar Comentarios"
+
+#: inc/wc_settings.php:104
+msgid ""
+"Select from the following products to enable installments based payments on "
+"them"
+msgstr "Seleccione de los siguientes productos para habilitar las cuotas"
+
+#: inc/wc_settings.php:113
+msgid "Installments"
+msgstr "cuotas"
+
+#: inc/wc_settings.php:113 inc/wc_settings.php:117 inc/wc_settings.php:118
+msgid "(Enable/Disable)"
+msgstr "(Activar / Desactivar)"
+
+#: inc/wc_settings.php:114
+msgid "Product Names"
+msgstr "Nombres de productos"
+
+#: inc/wc_settings.php:115
+msgid "Actions"
+msgstr "valores"
+
+#: inc/wc_settings.php:117
+msgid "Packages"
+msgstr "paquetes"
+
+#: inc/wc_settings.php:118
+msgid "Full Product Switch"
+msgstr "Interruptor de producto completo"
+
+#: inc/wc_settings.php:164
+msgid ""
+"Select from the following post types to enable installment control metabox"
+msgstr ""
+"Seleccione uno de los siguientes tipos de publicaciones para habilitar el "
+"control de pagos metabox"
+
+#: inc/wc_settings.php:165
+msgid "Note"
+msgstr "nota"
+
+#: inc/wc_settings.php:165
+msgid ""
+"Post & Page are enabled by default. If you will uncheck all, still post & "
+"page will work."
+msgstr ""
+"La publicación y la página están habilitadas de forma predeterminada. Si "
+"deselecciona todo, aún la publicación y la página funcionarán."
+
+#: inc/wc_settings.php:165
+msgid "So at least select one."
+msgstr "Así que al menos selecciona uno."
