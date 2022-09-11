@@ -100,7 +100,7 @@ if ( isset( $_POST['submit'] ) ) {
 
 		<?php
 		require_once 'gf_labels_table.php';
-		$_table_list = new GF_Labels_Table();
+		$_table_list = new FLGF_Labels_Table();
 		echo '<form method="post">';
 		$_table_list->prepare_items();
 

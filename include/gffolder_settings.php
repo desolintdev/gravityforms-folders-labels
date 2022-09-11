@@ -100,7 +100,7 @@ if ( isset( $_POST['submit'] ) ) {
 		<?php
 		require_once 'gf_folders_table.php';
 
-		$_table_list = new GF_Folders_Table();
+		$_table_list = new FLGF_Folders_Table();
 		echo '<form method="post">';
 		$_table_list->prepare_items();
 

@@ -1,5 +1,7 @@
-<?php if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+<?php
+
+if (! defined('ABSPATH')) {
+    exit;
 }
 /*
 Plugin Name: Manage Folders and Labels (Gravity Forms)
@@ -29,20 +31,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
-require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-
-require 'include/functions.php';
-register_activation_hook( __FILE__, 'flgf_gravityform_labels_activate' );
-register_deactivation_hook( __FILE__, 'flgf_gravityforms_labels_deactivate' );
-if ( ! function_exists( 'is_plugin_active' ) ) {
-	include_once ABSPATH . 'wp-admin/includes/plugin.php';
+require plugin_dir_path(__FILE__) . 'include/functions.php';
+register_activation_hook(__FILE__, 'flgf_gravityform_labels_activate');
+register_deactivation_hook(__FILE__, 'flgf_gravityforms_labels_deactivate');
+if (! is_plugin_active('gravityforms/gravityforms.php')) {
+    deactivate_plugins('gravityforms-folders-labels/index.php');
+    wp_die(__('Gravity Forms is not installed and activated. Please install and activate Gravity Forms.', 'flgf'));
 }
-if ( ! is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
-	deactivate_plugins( 'gravityforms-folders-labels/index.php' );
-	wp_die( __( 'Gravity Forms is not installed and activated. Please install and activate Gravity Forms.', 'flgf' ) );
-}
-if ( is_admin() ) {
-	$plugin = plugin_basename( __FILE__ );
-	add_filter( "plugin_action_links_$plugin", 'flgf_gfolders_plugin_setting' );
-	add_action( 'admin_enqueue_scripts', 'flgf_gfolder_admin_script', 99 );
+if (is_admin()) {
+    $plugin = plugin_basename(__FILE__);
+    add_filter("plugin_action_links_$plugin", 'flgf_gfolders_plugin_setting');
+    add_action('admin_enqueue_scripts', 'flgf_gfolder_admin_script', 99);
 }
