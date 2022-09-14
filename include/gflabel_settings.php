@@ -75,7 +75,7 @@ if ( isset( $_POST['submit'] ) ) {
 		$gformFolders = $wpdb->get_results( "SELECT DISTINCT gf_gfolder  FROM {$wpdb->prefix}gf_label_tags ORDER BY gf_gfolder ASC" );
 		?>
 
-		<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
+		<form class="nav-tab-content gf_label_form" action="<?php echo filter_input(INPUT_SERVER, 'REQUEST_URI');?>" method="post">
 			<?php wp_nonce_field( 'create_gflabel', 'gflabel_nonce' ); ?>
 
 			<!--<input type="hidden" name="gfolders_gf" value="<?php // echo wp_create_nonce($_GET['t']); ?>" />-->

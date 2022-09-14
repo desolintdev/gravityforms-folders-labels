@@ -79,7 +79,7 @@ if ( isset( $_POST['submit'] ) ) {
 		$gformFolders   = $wpdb->get_results( "SELECT DISTINCT gflabel_name  FROM {$wpdb->prefix}gfform_labels ORDER BY gflabel_name ASC" );
 		?>
 
-		<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
+		<form class="nav-tab-content gf_label_form" action="<?php echo filter_input(INPUT_SERVER, 'REQUEST_URI'); ?>" method="post">
 			<?php wp_nonce_field( 'create_gflabel', 'gflabel_nonce' ); ?>
 
 			<div class="input-group" id="new-folder-name">

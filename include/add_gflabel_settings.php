@@ -25,7 +25,7 @@ global $wp;
 	<div class="gf_label_text"><?php _e('You can add folder to the desire form', 'flgf'); ?>:</div>
 </div>
 
-<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
+<form class="nav-tab-content gf_label_form" action="<?php echo filter_input(INPUT_SERVER, 'REQUEST_URI');?>" method="post">
 
 	<input type="hidden" name="gfolders_gf" value="<?php echo esc_sql(sanitize_text_field($_GET['t'])); ?>"/>
 
