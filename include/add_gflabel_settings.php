@@ -16,6 +16,7 @@ if (isset($_POST['submit'])) {
     }
     wp_redirect(add_query_arg('label-added', 'success', get_site_url() . '/wp-admin/admin.php?page=gform_labels'));
 }
+global $wp;
 
 ?>
 
@@ -24,7 +25,7 @@ if (isset($_POST['submit'])) {
 	<div class="gf_label_text"><?php _e('You can add folder to the desire form', 'flgf'); ?>:</div>
 </div>
 
-<form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
 
 	<input type="hidden" name="gfolders_gf" value="<?php echo esc_sql(sanitize_text_field($_GET['t'])); ?>"/>
 
@@ -33,7 +34,7 @@ if (isset($_POST['submit'])) {
 		<label for="sel1">Select Form:</label>
 		<select name="gform_name" class="form-control" id="sel1">
 			<?php foreach ($wpdb->get_results("SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC") as $gformList) : ?>
-				<option value="<?php echo $gformList->title; ?>"><?php echo $gformList->title; ?> </option>
+				<option value="<?php  echo esc_attr($gformList->title); ?>"><?php esc_html_e($gformList->title); ?> </option>
 			<?php endforeach; ?>
 		</select>
 	</div>
@@ -46,7 +47,7 @@ if (isset($_POST['submit'])) {
 		<select name="gf_label_name1" class="form-control">
 
 			<?php foreach ($wpdb->get_results("SELECT DISTINCT gflabel_name  FROM {$wpdb->prefix}gfform_labels ORDER BY gflabel_name ASC") as $gformFolder) : ?>
-				<option value="<?php echo $gformFolder->gflabel_name; ?>"><?php echo $gformFolder->gflabel_name; ?> </option>
+				<option value="<?php  echo esc_attr($gformFolder->gflabel_name); ?>"><?php esc_html_e($gformFolder->gflabel_name); ?> </option>
 			<?php endforeach; ?>
 
 		</select>

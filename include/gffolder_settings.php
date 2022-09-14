@@ -8,7 +8,7 @@ if ( ! current_user_can( 'install_plugins' ) ) {
 global $wpdb;
 $wpurl = get_bloginfo( 'wpurl' );
 if ( isset( $_POST['genre'] ) ) {
-	$label_name     = esc_sql( sanitize_text_field( $_POST['genre'] ) );
+	$label_name     = sanitize_text_field( $_POST['genre'] );
 	$items          = $wpdb->get_results( $wpdb->prepare( "SELECT  gfform_id FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name= '%s'", $label_name ) );
 	$data['result'] = $items;
 	echo json_encode( $data );
@@ -74,11 +74,12 @@ if ( isset( $_POST['submit'] ) ) {
 		<!--</div>-->
 
 		<?php
-			$gformLists = $wpdb->get_results( "SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC" );
+		global $wp;
+		$gformLists = $wpdb->get_results( "SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC" );
 		$gformFolders   = $wpdb->get_results( "SELECT DISTINCT gflabel_name  FROM {$wpdb->prefix}gfform_labels ORDER BY gflabel_name ASC" );
 		?>
 
-		<form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+		<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
 			<?php wp_nonce_field( 'create_gflabel', 'gflabel_nonce' ); ?>
 
 			<div class="input-group" id="new-folder-name">

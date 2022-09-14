@@ -2,10 +2,10 @@
 Contributors: desolint
 Tags: gravityforms, gravity, forms, folders, labels
 Requires at least: 3.0
-Tested up to: 5.3
+Tested up to: 6.0.2
 Stable tag: 1.0.0
-License: GPL2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
@@ -101,7 +101,3 @@ along with Manage Folders and Labels. If not, see http://www.gnu.org/licenses/gp
 
 = 1.0.0
 * Very first release which allows to create folders and labels.
-= 1.5.0
-* Change Labels selection
-* Fixed Edit Label(s) feature
-* Fixed Edit Folder(s) feature

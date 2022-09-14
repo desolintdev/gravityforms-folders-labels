@@ -10,7 +10,7 @@ global $wpdb;
 
 
 if ( isset( $_POST['genre'] ) ) {
-	$label_name     = esc_sql( sanitize_text_field( $_POST['genre'] ) );
+	$label_name     = sanitize_text_field( $_POST['genre']  );
 	$items          = $wpdb->get_results( $wpdb->prepare( "SELECT  gfform_id FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder= '%s'", $label_name ) );
 	$data['result'] = $items;
 	echo json_encode( $data );
@@ -70,11 +70,12 @@ if ( isset( $_POST['submit'] ) ) {
 		<!--</div>-->
 
 		<?php
+		global $wp;
 		$gformLists   = $wpdb->get_results( "SELECT id, title FROM {$wpdb->prefix}gf_form ORDER BY date_created ASC" );
 		$gformFolders = $wpdb->get_results( "SELECT DISTINCT gf_gfolder  FROM {$wpdb->prefix}gf_label_tags ORDER BY gf_gfolder ASC" );
 		?>
 
-		<form class="nav-tab-content gf_label_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+		<form class="nav-tab-content gf_label_form" action="<?php echo home_url( $wp->request ); ?>" method="post">
 			<?php wp_nonce_field( 'create_gflabel', 'gflabel_nonce' ); ?>
 
 			<!--<input type="hidden" name="gfolders_gf" value="<?php // echo wp_create_nonce($_GET['t']); ?>" />-->

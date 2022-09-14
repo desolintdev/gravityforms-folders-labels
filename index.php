@@ -7,11 +7,11 @@ if (! defined('ABSPATH')) {
 Plugin Name: Manage Folders and Labels (Gravity Forms)
 Plugin URI: https://desolint.com
 Description: This will allow you to add the folders and labels to the gravity form.
-Version: 1.0
+Version: 1.0.0
 Author: Desol Int
 Text Domain: flgf
 Domain Path: /languages
-Requires at least: 3.9
+Requires at least: 3.0
 Requires PHP: 5.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
