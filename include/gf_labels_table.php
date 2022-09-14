@@ -116,6 +116,14 @@ class FLGF_Labels_Table extends WP_List_Table
      * Prepare table list items.
      */
 
+    public function flgf_usort_reorder($a, $b)
+    {
+        $orderby = (! empty($_REQUEST['orderby'])) ? esc_sql($_REQUEST['orderby']) : 'id'; // If no sort, default to title
+        $order   = (! empty($_REQUEST['order'])) ? esc_sql($_REQUEST['order']) : 'desc'; // If no order, default to asc
+        $result  = strnatcmp($a[ $orderby ], $b[ $orderby ]); // Determine sort order
+        return ($order === 'asc') ? $result : -$result; // Send final sort direction to usort
+    }
+
     public function prepare_items()
     {
         global $wpdb, $table_prefix;
@@ -146,15 +154,9 @@ class FLGF_Labels_Table extends WP_List_Table
 
         $items = $wpdb->get_results('SELECT id, gf_gfolder FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search}" . $wpdb->prepare('GROUP BY gf_gfolder ORDER BY id DESC LIMIT %d OFFSET %d;', $per_page, $offset), ARRAY_A);
 
-        function flgf_usort_reorder($a, $b)
-        {
-            $orderby = (! empty(esc_sql(sanitize_text_field($_REQUEST['orderby'])))) ? esc_sql(sanitize_text_field($_REQUEST['orderby'])) : 'id'; // If no sort, default to title
-            $order   = (! empty(esc_sql(sanitize_text_field($_REQUEST['order'])))) ? esc_sql(sanitize_text_field($_REQUEST['order'])) : 'desc'; // If no order, default to asc
-            $result  = strnatcmp($a[ $orderby ], $b[ $orderby ]); // Determine sort order
-            return ($order === 'asc') ? $result : -$result; // Send final sort direction to usort
-        }
+      
 
-        usort($items, 'flgf_usort_reorder');
+        usort($items, [FLGF_Labels_Table::class,'flgf_usort_reorder']);
         $count       = $wpdb->get_var('SELECT COUNT(id) FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search};");
         $this->items = $items;
 
