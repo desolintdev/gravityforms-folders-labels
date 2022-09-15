@@ -78,7 +78,6 @@ if ( isset( $_POST['submit'] ) ) {
 		<form class="nav-tab-content gf_label_form" action="<?php echo filter_input(INPUT_SERVER, 'REQUEST_URI');?>" method="post">
 			<?php wp_nonce_field( 'create_gflabel', 'gflabel_nonce' ); ?>
 
-			<!--<input type="hidden" name="gfolders_gf" value="<?php // echo wp_create_nonce($_GET['t']); ?>" />-->
 
 
 			<div class="input-group" id="new-folder-name">
@@ -95,7 +94,6 @@ if ( isset( $_POST['submit'] ) ) {
 	</div>
 
 	<h1 class="wp-heading-inline"><?php echo esc_html( 'Gravity Form Labels' ); ?>
-		<!--<a class="page-title-action" href="admin.php?page=gform_add_label">Add New</a>--></h1>
 
 	<div class="gflabels-list">
 
