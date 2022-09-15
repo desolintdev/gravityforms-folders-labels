@@ -7,8 +7,8 @@ global $wpdb;
 if (isset($_POST['submit'])) {
     $rows = array(
         array(
-            'gfform_id'    => esc_sql(sanitize_text_field($_REQUEST['gform_name'])),
-            'gflabel_name' => esc_sql(sanitize_text_field($_REQUEST['gf_label_name'])) == '' ? $gf_label_name = esc_sql(sanitize_text_field($_REQUEST['gf_label_name1'])) : esc_sql(sanitize_text_field($_REQUEST['gf_label_name'])),
+            'gfform_id'    => sanitize_text_field($_REQUEST['gform_name']),
+            'gflabel_name' => sanitize_text_field($_REQUEST['gf_label_name']) == '' ? $gf_label_name = sanitize_text_field($_REQUEST['gf_label_name1']) : sanitize_text_field($_REQUEST['gf_label_name']),
         ),
     );
     foreach ($rows as $row) {
@@ -27,7 +27,7 @@ global $wp;
 
 <form class="nav-tab-content gf_label_form" action="<?php echo filter_input(INPUT_SERVER, 'REQUEST_URI');?>" method="post">
 
-	<input type="hidden" name="gfolders_gf" value="<?php echo esc_sql(sanitize_text_field($_GET['t'])); ?>"/>
+	<input type="hidden" name="gfolders_gf" value="<?php echo sanitize_text_field($_GET['t']); ?>"/>
 
 	<div class="form-group">
 

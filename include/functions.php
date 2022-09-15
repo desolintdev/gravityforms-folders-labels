@@ -123,7 +123,7 @@ if (! function_exists('flgf_delgffolder')) {
         }
         global $wpdb;
         if (isset($_POST['folder_id'])) {
-            if ($wpdb->delete($wpdb->prefix . 'gfform_labels', array( 'id' => esc_sql(sanitize_text_field($_POST['folder_id'])) ))) {
+            if ($wpdb->delete($wpdb->prefix . 'gfform_labels', array( 'id' => sanitize_text_field($_POST['folder_id']) ))) {
                 esc_html_e('Done');
             } else {
                 esc_html_e('Error');
@@ -145,7 +145,7 @@ if (! function_exists('flgf_delgflabel')) {
         }
         global $wpdb;
         if (isset($_POST['label_id'])) {
-            if ($wpdb->delete($wpdb->prefix . 'gf_label_tags', array( 'id' => esc_sql(sanitize_text_field($_POST['label_id'])) ))) {
+            if ($wpdb->delete($wpdb->prefix . 'gf_label_tags', array( 'id' => sanitize_text_field($_POST['label_id']) ))) {
                 esc_html_e('Done');
             } else {
                 esc_html_e('Error');
@@ -166,11 +166,11 @@ if (! function_exists('flgf_updgffolder')) {
         }
         global $wpdb;
         if (isset($_POST['folder_id'])) {
-            $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name= '%s'", esc_sql(sanitize_text_field($_POST['folder_name']))));
+            $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gfform_labels WHERE gflabel_name= '%s'", sanitize_text_field($_POST['folder_name'])));
             if ($items->id != '') {
                 esc_html_e('Error');
             } else {
-                $OK = $wpdb->update("{$wpdb->prefix}gfform_labels", array( 'gflabel_name' => esc_sql(sanitize_text_field($_POST['folder_name'])) ), array( 'id' => esc_sql(sanitize_text_field($_POST['folder_id'])) ));
+                $OK = $wpdb->update("{$wpdb->prefix}gfform_labels", array( 'gflabel_name' => sanitize_text_field($_POST['folder_name']) ), array( 'id' => sanitize_text_field($_POST['folder_id']) ));
                 esc_html_e('Done');
             }
         }
@@ -189,7 +189,7 @@ if (! function_exists('flgf_updatetags')) {
         }
         global $wpdb;
         if (isset($_POST['form_id'])) {
-            if ($wpdb->update("{$wpdb->prefix}gf_gfolders", array( 'gf_gfolder' => esc_sql(sanitize_text_field($_POST['tagslist'])) ), array( 'gfform_id' => esc_sql(sanitize_text_field($_POST['form_id'])) ))) {
+            if ($wpdb->update("{$wpdb->prefix}gf_gfolders", array( 'gf_gfolder' => sanitize_text_field($_POST['tagslist']) ), array( 'gfform_id' => sanitize_text_field($_POST['form_id']) ))) {
                 esc_html_e('Done');
             } else {
                 esc_html_e('Error');
@@ -211,28 +211,28 @@ if (! function_exists('flgf_addgftags')) {
         }
         global $wpdb;
         if (isset($_POST['label_id'])) {
-            $items = $wpdb->get_row($wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix" . "gf_gfolders WHERE gfform_id= '%s'", esc_sql(sanitize_text_field($_POST['label_id']))));
+            $items = $wpdb->get_row($wpdb->prepare("SELECT  gfform_id FROM $wpdb->prefix" . "gf_gfolders WHERE gfform_id= '%s'", sanitize_text_field($_POST['label_id'])));
 
             if ($items->gfform_id > 0) {
                 $OK = $wpdb->update(
                     $wpdb->prefix . 'gf_gfolders',
                     array(
-                        'gfform_name' => esc_sql(sanitize_text_field($_POST['gfFormName'])),
-                        'gf_gfolder'  => esc_sql(sanitize_text_field($_POST['folder_name'])),
+                        'gfform_name' => sanitize_text_field($_POST['gfFormName']),
+                        'gf_gfolder'  => sanitize_text_field($_POST['folder_name']),
                     ),
-                    array( 'gfform_id' => esc_sql(sanitize_text_field($_POST['label_id'])) )
+                    array( 'gfform_id' => sanitize_text_field($_POST['label_id']) )
                 );
             } else {
                 $OK = $wpdb->query(
                     $wpdb->prepare(
                         "INSERT INTO $wpdb->prefix" . "gf_gfolders (gfform_id, gf_gfolder, gfform_name) VALUES ('%d', '%s','%s')",
-                        esc_sql(sanitize_text_field($_POST['label_id'])),
-                        esc_sql(sanitize_text_field($_POST['folder_name'])),
-                        esc_sql(sanitize_text_field($_POST['gfFormName']))
+                        sanitize_text_field($_POST['label_id']),
+                        sanitize_text_field($_POST['folder_name']),
+                        sanitize_text_field($_POST['gfFormName'])
                     )
                 );
             }
-            if (esc_sql(sanitize_text_field($_POST['label_id']))) {
+            if (sanitize_text_field($_POST['label_id'])) {
                 esc_html_e($OK[0]);
             } else {
                 esc_html_e('Error');
@@ -254,11 +254,11 @@ if (! function_exists('flgf_updgflabel')) {
         }
         global $wpdb;
         if (isset($_POST['label_id'])) {
-            $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder= '%s'", esc_sql(sanitize_text_field($_POST['label_name']))));
+            $items = $wpdb->get_row($wpdb->prepare("SELECT  id FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder= '%s'", sanitize_text_field($_POST['label_name'])));
             if ($items->id != '') {
                 esc_html_e('Error');
             } else {
-                $OK = $wpdb->update("{$wpdb->prefix}gf_label_tags", array( 'gf_gfolder' => esc_sql(sanitize_text_field($_POST['label_name'])) ), array( 'id' => esc_sql(sanitize_text_field($_POST['label_id'])) ));
+                $OK = $wpdb->update("{$wpdb->prefix}gf_label_tags", array( 'gf_gfolder' => sanitize_text_field($_POST['label_name']) ), array( 'id' => sanitize_text_field($_POST['label_id']) ));
                 esc_html_e('Done');
             }
         }
@@ -439,8 +439,8 @@ function flgfpostgffolder()
     global $wpdb;
 
     if (isset($_POST['folder'])) {
-        $folder_name = esc_sql(sanitize_text_field($_POST['folder']));
-        $form_name   = esc_sql(sanitize_text_field($_POST['form']));
+        $folder_name = sanitize_text_field($_POST['folder']);
+        $form_name   = sanitize_text_field($_POST['form']);
 
         $form_check = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}gfform_labels WHERE gfform_id = '$form_name'");
 
@@ -635,7 +635,7 @@ function flgf_gfolder_admin_script()
     wp_register_script('gflabel-scripts', plugins_url('js/admin-scripts.js?t=' . time(), dirname(__FILE__)), array( 'jquery' ));
     wp_register_script('gflabel-scripts-select2', plugins_url('js/select2.min.js?t=' . time(), dirname(__FILE__)), array( 'jquery' ));
 
-    wp_localize_script('gflabel-scripts', 'gfDel', array( 'gfdelajaxurl' => admin_url('admin-ajax.php') ));
+            wp_localize_script('gflabel-scripts', 'gfDel', array( 'gfdelajaxurl' => admin_url('admin-ajax.php'),'security'=> wp_create_nonce('acme-security-nonce') ));
 
     wp_localize_script(
         'gflabel-scripts',

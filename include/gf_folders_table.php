@@ -118,8 +118,8 @@ class FLGF_Folders_Table extends WP_List_Table
 
     public function flgf_usort_reorder($a, $b)
     {
-        $orderby = (! empty($_REQUEST['orderby'])) ? esc_sql(sanitize_text_field($_REQUEST['orderby'])) : 'id'; // If no sort, default to title
-        $order   = (! empty($_REQUEST['order'])) ? esc_sql(sanitize_text_field($_REQUEST['order'])) : 'desc'; // If no order, default to asc
+        $orderby = (! empty($_REQUEST['orderby'])) ? sanitize_text_field($_REQUEST['orderby']) : 'id'; // If no sort, default to title
+        $order   = (! empty($_REQUEST['order'])) ? sanitize_text_field($_REQUEST['order']) : 'desc'; // If no order, default to asc
         $result  = strnatcmp($a[ $orderby ], $b[ $orderby ]); // Determine sort order
         return ($order === 'asc') ? $result : -$result; // Send final sort direction to usort
     }
@@ -149,7 +149,7 @@ class FLGF_Folders_Table extends WP_List_Table
         $search = '';
 
         if (! empty($_REQUEST['s'])) {
-            $search = "AND gflabel_name LIKE '%" . esc_sql($wpdb->esc_like(esc_sql(sanitize_text_field($_REQUEST['s'])))) . "%' ";
+            $search = "AND gflabel_name LIKE '%" . $wpdb->esc_like(sanitize_text_field($_REQUEST['s'])) . "%' ";
         }
 
         $items = $wpdb->get_results('SELECT id, gfform_id, gflabel_name FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search}" . $wpdb->prepare('GROUP BY gflabel_name ORDER BY id DESC LIMIT %d OFFSET %d;', $per_page, $offset), ARRAY_A);
@@ -199,8 +199,8 @@ class FLGF_Folders_Table extends WP_List_Table
             self::flgf_delete_records(absint($_GET['record']));
         }
 
-        if ((isset($_POST['action']) && esc_sql(sanitize_text_field($_POST['action'])) == 'bulk-delete') || (isset($_POST['action2']) && esc_sql(sanitize_text_field($_POST['action2'])) == 'bulk-delete')) {
-            $delete_ids = esc_sql(sanitize_text_field($_POST['bulk-delete)']));
+        if ((isset($_POST['action']) && sanitize_text_field($_POST['action']) == 'bulk-delete') || (isset($_POST['action2']) && sanitize_text_field($_POST['action2']) == 'bulk-delete')) {
+            $delete_ids = sanitize_text_field($_POST['bulk-delete']);
             foreach ($delete_ids as $id) {
                 self::flgf_delete_records($id);
             }

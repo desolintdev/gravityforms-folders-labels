@@ -198,7 +198,7 @@ class FLGF_Labels_Table extends WP_List_Table
             self::flgf_delete_label_records(absint($_GET['record']));
         }
 
-        if ((isset($_POST['action']) && esc_sql(sanitize_text_field($_POST['action'])) == 'bulk-delete') || (isset($_POST['action2']) && esc_sql(sanitize_text_field($_POST['action2'])) == 'bulk-delete')) {
+        if ((isset($_POST['action']) && sanitize_text_field($_POST['action']) == 'bulk-delete') || (isset($_POST['action2']) && sanitize_text_field($_POST['action2']) == 'bulk-delete')) {
             $delete_ids = esc_sql($_POST['bulk-delete']);
             foreach ($delete_ids as $id) {
                 self::flgf_delete_label_records($id);

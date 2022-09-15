@@ -21,10 +21,10 @@ if ( isset( $_POST['submit'] ) ) {
 	if ( ! wp_verify_nonce( $_POST['gflabel_nonce'], 'create_gflabel' ) ) {
 		wp_die( 'Our Site is protected!!' );
 	} else {
-		$gf_label_name = esc_sql( sanitize_text_field( $_REQUEST['gf_label_name'] ) );
+		$gf_label_name = sanitize_text_field( $_REQUEST['gf_label_name'] );
 		$rows          = array(
 			array(
-				'gf_gfolder' => esc_sql( sanitize_text_field( $_REQUEST['gf_label_name'] ) ) == '' ? esc_sql( sanitize_text_field( $_REQUEST['gf_label_name1'] ) ) : esc_sql( sanitize_text_field( $_REQUEST['gf_label_name'] ) ),
+				'gf_gfolder' => sanitize_text_field( $_REQUEST['gf_label_name'] ) == '' ? sanitize_text_field( $_REQUEST['gf_label_name1'] ) : sanitize_text_field( $_REQUEST['gf_label_name'] ),
 			),
 		);
 		if ( $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}gf_label_tags WHERE gf_gfolder = '$gf_label_name'" ) > 0 ) {

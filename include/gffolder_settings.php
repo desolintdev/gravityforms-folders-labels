@@ -18,10 +18,10 @@ if ( isset( $_POST['submit'] ) ) {
 	if ( ! wp_verify_nonce( $_POST['gflabel_nonce'], 'create_gflabel' ) ) {
 		wp_die( 'Our Site is protected!!' );
 	} else {
-		$gform_name    = esc_sql( sanitize_text_field( $_REQUEST['gform_name'] ) );
-		$gf_label_name = esc_sql( sanitize_text_field( $_REQUEST['gf_label_name'] ) );
+		$gform_name    = sanitize_text_field( $_REQUEST['gform_name'] );
+		$gf_label_name = sanitize_text_field( $_REQUEST['gf_label_name'] );
 		if ( $gf_label_name == '' ) {
-			$gf_label_name = esc_sql( sanitize_text_field( $_REQUEST['gf_label_name1'] ) );
+			$gf_label_name = sanitize_text_field( $_REQUEST['gf_label_name1'] );
 		}
 
 		$rows = array(
