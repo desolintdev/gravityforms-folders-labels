@@ -118,8 +118,8 @@ class FLGF_Labels_Table extends WP_List_Table
 
     public function flgf_usort_reorder($a, $b)
     {
-        $orderby = (! empty($_REQUEST['orderby'])) ? esc_sql($_REQUEST['orderby']) : 'id'; // If no sort, default to title
-        $order   = (! empty($_REQUEST['order'])) ? esc_sql($_REQUEST['order']) : 'desc'; // If no order, default to asc
+        $orderby = (! empty($_REQUEST['orderby'])) ? sanitize_text_field($_REQUEST['orderby']) : 'id'; // If no sort, default to title
+        $order   = (! empty($_REQUEST['order'])) ? sanitize_text_field($_REQUEST['order']) : 'desc'; // If no order, default to asc
         $result  = strnatcmp($a[ $orderby ], $b[ $orderby ]); // Determine sort order
         return ($order === 'asc') ? $result : -$result; // Send final sort direction to usort
     }
@@ -149,7 +149,7 @@ class FLGF_Labels_Table extends WP_List_Table
         $search = '';
 
         if (! empty($_REQUEST['s'])) {
-            $search = "AND gf_gfolder LIKE '%" . esc_sql($wpdb->esc_like($_REQUEST['s'])) . "%' ";
+            $search = $wpdb->prepare("AND gf_gfolder LIKE '%%s%'",sanitize_text_field($wpdb->esc_like($_REQUEST['s'])));
         }
 
         $items = $wpdb->get_results('SELECT id, gf_gfolder FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search}" . $wpdb->prepare('GROUP BY gf_gfolder ORDER BY id DESC LIMIT %d OFFSET %d;', $per_page, $offset), ARRAY_A);
