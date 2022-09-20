@@ -149,7 +149,7 @@ class FLGF_Labels_Table extends WP_List_Table
         $search = '';
 
         if (! empty($_REQUEST['s'])) {
-            $search = "AND gf_gfolder LIKE '%" . $wpdb->esc_like(sanitize_text_field($_REQUEST['s'])) . "%' ";
+            $search = $wpdb->prepare("AND gf_gfolder LIKE '%%%s%%'", $wpdb->esc_like(sanitize_text_field($_REQUEST['s'])));
         }
 
         $items = $wpdb->get_results('SELECT id, gf_gfolder FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search}" . $wpdb->prepare('GROUP BY gf_gfolder ORDER BY id DESC LIMIT %d OFFSET %d;', $per_page, $offset), ARRAY_A);
