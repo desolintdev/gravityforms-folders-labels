@@ -149,8 +149,7 @@ class FLGF_Folders_Table extends WP_List_Table
         $search = '';
 
         if (! empty($_REQUEST['s'])) {
-            $search =  $wpdb->prepare("AND gflabel_name LIKE '%%s%'",sanitize_text_field($wpdb->esc_like($_REQUEST['s'])));
-            //"AND gflabel_name LIKE '%" . $wpdb->esc_like(sanitize_text_field($_REQUEST['s'])) . "%' ";
+            $search = "AND gflabel_name LIKE '%" . $wpdb->esc_like(sanitize_text_field($_REQUEST['s'])) . "%' ";
         }
 
         $items = $wpdb->get_results('SELECT id, gfform_id, gflabel_name FROM ' . $sql_gflabel_table . " WHERE 1 = 1 {$search}" . $wpdb->prepare('GROUP BY gflabel_name ORDER BY id DESC LIMIT %d OFFSET %d;', $per_page, $offset), ARRAY_A);

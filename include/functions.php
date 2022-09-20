@@ -117,7 +117,7 @@ add_action('wp_ajax_nopriv_flgf_delgffolder', 'flgf_delgffolder');
 if (! function_exists('flgf_delgffolder')) {
     function flgf_delgffolder()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -139,7 +139,7 @@ add_action('wp_ajax_nopriv_flgf_delgflabel', 'flgf_delgflabel');
 if (! function_exists('flgf_delgflabel')) {
     function flgf_delgflabel()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -160,7 +160,7 @@ add_action('wp_ajax_nopriv_flgf_updgffolder', 'flgf_updgffolder');
 if (! function_exists('flgf_updgffolder')) {
     function flgf_updgffolder()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -183,7 +183,7 @@ add_action('wp_ajax_nopriv_flgf_updatetags', 'flgf_updatetags');
 if (! function_exists('flgf_updatetags')) {
     function flgf_updatetags()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -205,7 +205,7 @@ add_action('wp_ajax_nopriv_flgf_addgftags', 'flgf_addgftags');
 if (! function_exists('flgf_addgftags')) {
     function flgf_addgftags()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -248,7 +248,7 @@ add_action('wp_ajax_nopriv_flgf_updgflabel', 'flgf_updgflabel');
 if (! function_exists('flgf_updgflabel')) {
     function flgf_updgflabel()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -272,7 +272,7 @@ add_action('wp_ajax_nopriv_flgf_getallglabels', 'flgf_getallglabels');
 if (! function_exists('flgf_getallglabels')) {
     function flgf_getallglabels()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -293,7 +293,7 @@ add_action('wp_ajax_nopriv_flgf_gfformslists', 'flgf_gfformslists');
 if (! function_exists('flgf_gfformslists')) {
     function flgf_gfformslists()
     {
-        if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+        if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
             wp_send_json_error('Invalid security token sent.');
             wp_die();
         }
@@ -339,7 +339,7 @@ add_action('wp_ajax_nopriv_flgf_getformsbyid', 'flgf_getformsbyid');
 
 function flgf_getformsbyid()
 {
-    if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+    if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
         wp_send_json_error('Invalid security token sent.');
         wp_die();
     }
@@ -386,7 +386,7 @@ add_action('wp_ajax_nopriv_flgf_getformsbylabelid', 'flgf_getformsbylabelid');
 
 function flgf_getformsbylabelid()
 {
-    if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+    if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
         wp_send_json_error('Invalid security token sent.');
         wp_die();
     }
@@ -431,7 +431,7 @@ add_action('wp_ajax_nopriv_flgfpostgffolder', 'flgfpostgffolder');
 
 function flgfpostgffolder()
 {
-    if (! check_ajax_referer('acme-security-nonce', 'security', false)) {
+    if (! check_ajax_referer('flgf-security-nonce', 'security', false)) {
         wp_send_json_error('Invalid security token sent.');
         wp_die();
     }
@@ -508,7 +508,7 @@ function flgf_footer_scripts()
 				$(this).removeAttr("selected");
 				$.ajax({
 					url: aajaxurl,
-					data: {action: "flgfpostgffolder",security: "<?php echo wp_create_nonce('acme-security-nonce'); ?>", folder: folder_title, form: form_title},
+					data: {action: "flgfpostgffolder",security: "<?php echo wp_create_nonce('flgf-security-nonce'); ?>", folder: folder_title, form: form_title},
 					type: 'post',
 					success: function (response) {
 						response = response.slice(0, -1);
@@ -549,7 +549,7 @@ function flgf_footer_scripts()
 						label_id: label_id,
 						folder_name: comb_tags,
 						gfFormName: gfFormName,
-						security: "<?php echo wp_create_nonce('acme-security-nonce'); ?>",
+						security: "<?php echo wp_create_nonce('flgf-security-nonce'); ?>",
 					},
 					success: function (response) {
 						if (response != "Error0") {
@@ -598,7 +598,7 @@ function flgf_footer_scripts()
 				$.ajax({
 					type: 'post',
 					url: aajaxurl,
-					data: {action: "flgf_updatetags", security: "<?php echo wp_create_nonce('acme-security-nonce'); ?>", tagslist: getUpdatedTag, form_id: dataid},
+					data: {action: "flgf_updatetags", security: "<?php echo wp_create_nonce('flgf-security-nonce'); ?>", tagslist: getUpdatedTag, form_id: dataid},
 					success: function (response) {
 						if (response == "Done0") {
 						} else {
@@ -635,14 +635,14 @@ function flgf_gfolder_admin_script()
     wp_register_script('gflabel-scripts', plugins_url('js/admin-scripts.js?t=' . time(), dirname(__FILE__)), array( 'jquery' ));
     wp_register_script('gflabel-scripts-select2', plugins_url('js/select2.min.js?t=' . time(), dirname(__FILE__)), array( 'jquery' ));
 
-            wp_localize_script('gflabel-scripts', 'gfDel', array( 'gfdelajaxurl' => admin_url('admin-ajax.php'),'security'=> wp_create_nonce('acme-security-nonce') ));
+            wp_localize_script('gflabel-scripts', 'gfDel', array( 'gfdelajaxurl' => admin_url('admin-ajax.php'),'security'=> wp_create_nonce('flgf-security-nonce') ));
 
     wp_localize_script(
         'gflabel-scripts',
         'flgfpostFolder',
         array(
             'flgfpostfolderajaxurl' => admin_url('admin-ajax.php'),
-            'security'              => wp_create_nonce('acme-security-nonce'),
+            'security'              => wp_create_nonce('flgf-security-nonce'),
         )
     );
 
@@ -651,7 +651,7 @@ function flgf_gfolder_admin_script()
         'updategffolder',
         array(
             'gfupdateajaxurl' => admin_url('admin-ajax.php'),
-            'security'        => wp_create_nonce('acme-security-nonce'),
+            'security'        => wp_create_nonce('flgf-security-nonce'),
         )
     );
 
@@ -660,7 +660,7 @@ function flgf_gfolder_admin_script()
         'getAllgforms',
         array(
             'getAllgformsajaxurl' => admin_url('admin-ajax.php'),
-            'security'            => wp_create_nonce('acme-security-nonce'),
+            'security'            => wp_create_nonce('flgf-security-nonce'),
         )
     );
 
@@ -669,7 +669,7 @@ function flgf_gfolder_admin_script()
         'getgformsbyid',
         array(
             'getgformsbyidajaxurl' => admin_url('admin-ajax.php'),
-            'security'             => wp_create_nonce('acme-security-nonce'),
+            'security'             => wp_create_nonce('flgf-security-nonce'),
         )
     );
 
